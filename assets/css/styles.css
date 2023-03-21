@@ -364,7 +364,7 @@
 /* about features style */
 
 .about-features-background {
-  background-image: url("../img/icons.svg#icon-thread-mob");
+  background-image: url(../assets/img/icons.svg#icon-thread-mob);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -377,7 +377,6 @@
   justify-content: center;
   gap: 17px;
   margin-top: 40px;
-  background-image: url(../img/icons.svg#icon-thread-mob);
 }
 
 .about-features-item {
@@ -600,7 +599,7 @@
 }
 
 .why-legkolaks-use-video {
-  background-image: url(../img/icons.svg#icon-thread-mob);
+  background-image: url(../assets/img/icons.svg#icon-thread-mob);
   position: relative;
   margin: 0 auto;
 }
