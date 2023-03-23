@@ -4,8 +4,6 @@
   --header-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
   --header-nav-bcg: #ffffff;
   --logo-color: #1697d2;
-  --header-btn-color: #333333;
-  --header-btn-bcg: #fcc400;
   --header-mob-menu-bcg: #0c67bd;
 
   /* hero color */
@@ -23,6 +21,13 @@
   /* main background color */
 
   --body-bcg: #ffffff;
+
+  /* background wrap width */
+  --mob-background-wrap: 320px;
+  --mob-background-how-to-use-wrap: 292px;
+  --mob768-hero-background-wrap: 768px;
+  --tab-hero-background-wrap: 1024px;
+  --desk-hero-background-wrap: 1200px;
 }
 
 body {
@@ -30,16 +35,6 @@ body {
   color: var(--text-color);
   background-color: var(--body-bcg);
   overflow-x: hidden;
-}
-
-.h2-title {
-  font-family: "Arimo", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.4;
-  color: var(--title-color);
-  text-transform: uppercase;
 }
 
 h1,
@@ -60,8 +55,11 @@ ul {
 
 img {
   display: block;
-  max-width: 100%;
   height: auto;
+}
+
+.img {
+  max-width: 100%;
 }
 
 a {

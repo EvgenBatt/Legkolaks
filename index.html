@@ -23,12 +23,16 @@
     <header class="header">
       <div class="container header-container">
         <a href="./index.html" class="logo">
-          <svg class="logo-icon" width="168px" height="26px">
-            <use href="./assets/img/icons.svg#icon-logo"></use>
-          </svg>
+          <img
+            class="logo-icon"
+            src="./assets/img/svg/icon-logo.svg"
+            alt="Logo Icon"
+            width="122"
+            height="19"
+          />
         </a>
         <div class="header-nav-mob">
-          <nav class="header-nav">
+          <nav>
             <ul class="header-nav-list">
               <li class="header-nav-item">
                 <a href="#" class="header-nav-link">Взрослым</a>
@@ -44,24 +48,28 @@
               </li>
             </ul>
           </nav>
-          <div class="lang-wrap-mob">
-            <a href="#" class="lang-ru">ru</a>
-            <span class="lang-pipeline">|</span>
-            <a href="#" class="lang-uz">uz</a>
-          </div>
+          <ul class="lang-mob-list">
+            <li class="lang-mob-item"><a href="#" class="lang-ru">ru</a></li>
+            <li class="lang-mob-item"><span class="lang-pipeline">|</span></li>
+            <li class="lang-mob-item"><a href="#" class="lang-uz">uz</a></li>
+          </ul>
         </div>
         <a class="pharmacy-link">
-          <svg class="pharmacy-icon" width="16px" height="15px">
-            <use href="./assets/img/icons.svg#icon-cart"></use>
-          </svg>
+          <img
+            class="pharmacy-icon"
+            src="./assets/img/svg/icon-cart.svg"
+            alt="Pharmacy Icon"
+            width="16"
+            height="15"
+          />
           <span class="pharmacy-text-mob">Аптеки</span>
           <span class="pharmacy-text-desk">Найти в аптеках</span>
         </a>
-        <div class="lang-wrap">
-          <a href="#" class="lang-ru">ru</a>
-          <span class="lang-pipeline">|</span>
-          <a href="#" class="lang-uz">uz</a>
-        </div>
+        <ul class="lang-list">
+          <li class="lang-item"><a href="#" class="lang-ru">ru</a></li>
+          <li class="lang-item"><span class="lang-pipeline">|</span></li>
+          <li class="lang-item"><a href="#" class="lang-uz">uz</a></li>
+        </ul>
         <button
           class="header-mob-menu-btn"
           aria-label="open menu"
@@ -77,129 +85,183 @@
 
     <section class="hero">
       <div class="container">
-        <div class="hero-background">
-          <h1 class="hero-title">
-            легколакс<sup>&reg;</sup><br />
-            <span class="hero-subtitle">легкое решение при запоре</span>
-          </h1>
-
-          <img
-            class="hero-woman-img"
-            src="./assets/img/index/index-hero-woman-desk-1x.png"
-            alt="Woman says: I am ok"
-            width="485"
-            srcset="
-              ./assets/img/index/index-hero-woman-mob-1x.png  180w,
-              ./assets/img/index/index-hero-woman-mob-2x.png  360w,
-              ./assets/img/index/index-hero-woman-desk-1x.png 485w,
-              ./assets/img/index/index-hero-woman-desk-2x.png 970w
-            "
-            sizes="(max-width: 767px) 180px, (min-width: 768px) 485px"
-          />
-
-          <img
-            class="hero-legkolax_packs-img"
-            src="./assets/img/index/index-hero-legkolax-packs-desk-1x.png"
-            alt="Legkoglax packs"
-            width="288"
-            srcset="
-              ./assets/img/index/index-hero-legkolax-packs-mob-1x.png  129w,
-              ./assets/img/index/index-hero-legkolax-packs-mob-2x.png  258w,
-              ./assets/img/index/index-hero-legkolax-packs-desk-1x.png 288w,
-              ./assets/img/index/index-hero-legkolax-packs-desk-2x.png 576w
-            "
-            sizes="(max-width: 767px) 129px, (min-width: 768px) 288px"
-          />
-
-          <div class="hero-bubble-small"></div>
-          <div class="hero-bubble-medium"></div>
-          <div class="hero-bubble-large"></div>
+        <div class="hero-background-wrap">
+          <div class="hero-background">
+            <div class="hero-title-wrap">
+              <h1 class="hero-title">
+                легколакс<sup>&reg;</sup><br />
+                <span class="hero-subtitle">легкое решение при запоре</span>
+              </h1>
+            </div>
+            <div class="hero-woman-img-wrap">
+              <img
+                class="hero-woman-img img"
+                src="./assets/img/index/index-hero-woman-desk-1x.png"
+                alt="Woman says: I am ok"
+                width="485"
+                srcset="
+                  ./assets/img/index/index-hero-woman-mob-1x.png  180w,
+                  ./assets/img/index/index-hero-woman-mob-2x.png  360w,
+                  ./assets/img/index/index-hero-woman-desk-1x.png 485w,
+                  ./assets/img/index/index-hero-woman-desk-2x.png 970w
+                "
+                sizes="(max-width: 767px) 180px, (min-width: 768px) 485px"
+              />
+            </div>
+            <div class="hero-legkolax_packs-img-wrap">
+              <img
+                class="hero-legkolax_packs-img img"
+                src="./assets/img/index/index-hero-legkolax-packs-desk-1x.png"
+                alt="Legkoglax packs"
+                width="288"
+                srcset="
+                  ./assets/img/index/index-hero-legkolax-packs-mob-1x.png  129w,
+                  ./assets/img/index/index-hero-legkolax-packs-mob-2x.png  258w,
+                  ./assets/img/index/index-hero-legkolax-packs-desk-1x.png 288w,
+                  ./assets/img/index/index-hero-legkolax-packs-desk-2x.png 576w
+                "
+                sizes="(max-width: 767px) 129px, (min-width: 768px) 288px"
+              />
+            </div>
+            <div class="hero-bubble-small"></div>
+            <div class="hero-bubble-medium"></div>
+            <div class="hero-bubble-large"></div>
+          </div>
         </div>
       </div>
     </section>
+
     <section class="about">
       <div class="container">
-        <div>
-          <h2 class="about-title h2-title">
-            легколакс<sup>&reg;</sup> - легкое решение при запоре
-          </h2>
-          <div class="about-tex-wrap">
-            <p class="about-text about-text1">
-              Многие убеждены, что испражнения должны быть ежедневными. На самом деле
-              частота стула зависит от многих факторов.
-            </p>
-            <p class="about-text">
-              И все же, стоит обратить внимание на то, что задержка испражнения кишечника
-              больше, чем на 48 часов может свидетельствовать о наличии
-              запора<sup>6</sup>.
-            </p>
+        <div class="about-bubble-medium"></div>
+        <div class="about-desk-wrap">
+          <div class="about-title-wrap">
+            <h2 class="about-title h2-title">
+              легколакс<sup>&reg;</sup> - легкое решение при запоре
+            </h2>
+            <ul class="about-text-list">
+              <li class="about-text-item">
+                <p class="about-text">
+                  Многие убеждены, что испражнения должны быть ежедневными. На самом деле
+                  частота стула зависит от многих факторов.
+                </p>
+              </li>
+              <li class="about-text-item">
+                <p class="about-text">
+                  И все же, стоит обратить внимание на то, что задержка испражнения
+                  кишечника больше, чем на 48 часов может свидетельствовать о наличии
+                  запора<sup>6</sup>.
+                </p>
+              </li>
+            </ul>
           </div>
-        </div>
 
-        <div class="about-cause-wrap">
-          <div>
-            <img
-              class="about-img"
-              src="./assets/img/index/index-about-girl-cause-desk-1x.jpg"
-              alt="Legkoglax packs"
-              width="260"
-              srcset="
-                ./assets/img/index/index-about-girl-cause-mob-1x.jpg  126w,
-                ./assets/img/index/index-about-girl-cause-mob-2x.jpg  252w,
-                ./assets/img/index/index-about-girl-cause-desk-1x.jpg 260w,
-                ./assets/img/index/index-about-girl-cause-desk-2x.jpg 520w
-              "
-              sizes="(max-width: 767px) 126px, (min-width: 768px) 260px"
-            />
-          </div>
-          <div>
-            <h3 class="about-subtitle">причины запора</h3>
-            <p class="about-subtitle-text">Подавление природных позывов к испражнению</p>
-          </div>
+          <ul class="about-cause-list">
+            <li class="about-cause-item">
+              <div class="about-img-wrap">
+                <img
+                  class="about-img img"
+                  src="./assets/img/index/index-about-girl-cause-desk-1x.jpg"
+                  alt="Legkoglax packs"
+                  width="260"
+                  srcset="
+                    ./assets/img/index/index-about-girl-cause-mob-1x.jpg  126w,
+                    ./assets/img/index/index-about-girl-cause-mob-2x.jpg  252w,
+                    ./assets/img/index/index-about-girl-cause-desk-1x.jpg 260w,
+                    ./assets/img/index/index-about-girl-cause-desk-2x.jpg 520w
+                  "
+                  sizes="(max-width: 767px) 126px, (min-width: 768px) 260px"
+                />
+              </div>
+            </li>
+            <li class="about-cause-item">
+              <h3 class="about-subtitle">причины запора</h3>
+              <p class="about-subtitle-text">
+                Подавление природных позывов к испражнению
+              </p>
+            </li>
+          </ul>
         </div>
 
         <div class="about-features-background">
+          <div class="about-features-bubble-small"></div>
           <ul class="about-features-list">
             <li class="about-features-item">
-              <div class="about-features-img">
-                <svg class="about-features-woman-icon" width="27" height="30">
-                  <use href="./assets/img/icons.svg#icon-woman"></use>
-                </svg>
-              </div>
               <a class="about-features-link" href="#">
-                <h3 class="about-features-title">запор у взрослых</h3>
-                <p class="about-features-text">Подробнее</p>
-                <svg class="about-features-arrow-icon" width="9" height="15">
-                  <use href="./assets/img/icons.svg#icon-arrow-right"></use>
-                </svg>
+                <div class="about-features-img">
+                  <img
+                    class="about-features-woman-icon"
+                    src="./assets/img/svg/icon-woman.svg"
+                    alt="Woman Icon"
+                    width="27"
+                    height="30"
+                  />
+                </div>
+                <div class="about-features-content">
+                  <h3 class="about-features-title">запор у взрослых</h3>
+                  <div class="about-features-text-wrap">
+                    <p class="about-features-text">Подробнее</p>
+                    <img
+                      class="about-features-arrow-icon"
+                      src="./assets/img/svg/icon-arrow-right.svg"
+                      alt="Arrow Right Icon"
+                      width="9"
+                      height="15"
+                    />
+                  </div>
+                </div>
               </a>
             </li>
             <li class="about-features-item">
-              <div class="about-features-img">
-                <svg class="about-features-girl-icon" width="24" height="25">
-                  <use href="./assets/img/icons.svg#icon-girl"></use>
-                </svg>
-              </div>
               <a class="about-features-link" href="#">
-                <h3 class="about-features-title">запор у детей</h3>
-                <p class="about-features-text">Подробнее</p>
-                <svg class="about-features-arrow-icon" width="9" height="15">
-                  <use href="./assets/img/icons.svg#icon-arrow-right"></use>
-                </svg>
+                <div class="about-features-img">
+                  <img
+                    class="about-features-girl-icon"
+                    src="./assets/img/svg/icon-girl.svg"
+                    alt="Girl Icon"
+                    width="24"
+                    height="25"
+                  />
+                </div>
+                <div class="about-features-content">
+                  <h3 class="about-features-title">запор у детей</h3>
+                  <div class="about-features-text-wrap">
+                    <p class="about-features-text">Подробнее</p>
+                    <img
+                      class="about-features-arrow-icon"
+                      src="./assets/img/svg/icon-arrow-right.svg"
+                      alt="Arrow Right Icon"
+                      width="9"
+                      height="15"
+                    />
+                  </div>
+                </div>
               </a>
             </li>
             <li class="about-features-item">
-              <div class="about-features-img">
-                <svg class="about-features-pregnant-icon" width="20" height="31">
-                  <use href="./assets/img/icons.svg#icon-pregnant"></use>
-                </svg>
-              </div>
               <a class="about-features-link" href="#">
-                <h3 class="about-features-title">запор у беременных</h3>
-                <p class="about-features-text">Подробнее</p>
-                <svg class="about-features-arrow-icon" width="9" height="15">
-                  <use href="./assets/img/icons.svg#icon-arrow-right"></use>
-                </svg>
+                <div class="about-features-img">
+                  <img
+                    class="about-features-pregnant-icon"
+                    src="./assets/img/svg/icon-pregnant.svg"
+                    alt="Pregnant Icon"
+                    width="20"
+                    height="31"
+                  />
+                </div>
+                <div class="about-features-content">
+                  <h3 class="about-features-title">запор у беременных</h3>
+                  <div class="about-features-text-wrap">
+                    <p class="about-features-text">Подробнее</p>
+                    <img
+                      class="about-features-arrow-icon"
+                      src="./assets/img/svg/icon-arrow-right.svg"
+                      alt="Arrow Right Icon"
+                      width="9"
+                      height="15"
+                    />
+                  </div>
+                </div>
               </a>
             </li>
           </ul>
@@ -209,109 +271,154 @@
 
     <section class="why-legkolaks">
       <div class="container">
-        <div class="why-legkolaks-background">
-          <div class="why-legkolaks-bubble-small"></div>
-          <div class="why-legkolaks-bubble-medium"></div>
-          <img
-            class="why-legkolaks-img"
-            src="./assets/img/index/index-why-legkolax-woman-desk-1x.png"
-            alt="Woman with water"
-            width="370"
-            srcset="
-              ./assets/img/index/index-why-legkolax-woman-mob-1x.png  186w,
-              ./assets/img/index/index-why-legkolax-woman-mob-2x.png  370w,
-              ./assets/img/index/index-why-legkolax-woman-desk-1x.png 370w,
-              ./assets/img/index/index-why-legkolax-woman-desk-2x.png 740w
-            "
-            sizes="(max-width: 767px) 186px, (min-width: 768px) 370px"
-          />
+        <div class="why-legkolaks-desk-wrap">
+          <div class="why-legkolaks-background-wrap">
+            <div class="why-legkolaks-background">
+              <div class="why-legkolaks-img-wrap">
+                <img
+                  class="why-legkolaks-img img"
+                  src="./assets/img/index/index-why-legkolax-woman-desk-1x.png"
+                  alt="Woman with water"
+                  width="398"
+                  srcset="
+                    ./assets/img/index/index-why-legkolax-woman-mob-1x.png  200w,
+                    ./assets/img/index/index-why-legkolax-woman-mob-2x.png  400w,
+                    ./assets/img/index/index-why-legkolax-woman-desk-1x.png 398w,
+                    ./assets/img/index/index-why-legkolax-woman-desk-2x.png 796w
+                  "
+                  sizes="(max-width: 767px) 200px, (min-width: 768px) 398px"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="why-legkolaks-title-desk-wrap">
+            <h2 class="why-legkolaks-title h2-title">почему легколакс<sup>&reg;</sup></h2>
+            <ul class="why-legkolaks-content-list">
+              <li class="why-legkolaks-content-item">
+                <p class="why-legkolaks-text">
+                  У Легколакса другой механизм действия. В состав Легколакса входит
+                  молекула
+                  <b>Макрогол 4000</b>. Она в первую очередь используется для лечения
+                  запора у детей в Европе<sup>5</sup>.
+                </p>
+              </li>
+              <li class="why-legkolaks-content-item">
+                <p class="why-legkolaks-text">
+                  <b>Макрогол 4000</b> нормализует объем и консистенцию каловых масс
+                  благодаря насыщению их водой. Это облегчает испражнение, не вызывая
+                  болевых ощущений.
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="why-legkolaks-box-desk-wrap">
+            <ul class="why-legkolaks-box-list">
+              <li class="why-legkolaks-box-item">
+                <div class="why-legkolaks-box-title-wrap">
+                  <div class="why-legkolaks-box-pic">!</div>
+                  <h2 class="why-legkolaks-box-title">важно!</h2>
+                </div>
+              </li>
+              <li class="why-legkolaks-box-item">
+                <p class="why-legkolaks-box-text">
+                  ЛЕГКОЛАКС нормализует процесс испражнения.
+                </p>
+              </li>
+              <li class="why-legkolaks-box-item">
+                <div class="why-legkolaks-box-wrap">
+                  <div class="why-legkolaks-box-icon-wrap">
+                    <img
+                      class="why-legkolaks-box-icon"
+                      src="./assets/img/svg/icon-calendar.svg"
+                      alt="Calendar Icon"
+                      width="40"
+                      height="40"
+                    />
+                  </div>
+                  <p class="why-legkolaks-box-text">
+                    Прием ЛЕГКОЛАКСА курсом 10-12 дней способствует сохранению
+                    необходимого эффекта и после прекращения применения препарата.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="why-legkolaks-use-wrap">
+            <ul class="why-legkolaks-use-list">
+              <li class="why-legkolaks-use-item">
+                <div class="why-legkolaks-use-wrap">
+                  <div class="why-legkolaks-use-icon-wrap">
+                    <img
+                      class="why-legkolaks-use-icon"
+                      src="./assets/img/svg/icon-timer.svg"
+                      alt="Timer Icon"
+                      width="40"
+                      height="40"
+                    />
+                  </div>
+                  <p class="why-legkolaks-use-text">Разрешен к длительному применению</p>
+                </div>
+              </li>
+              <li class="why-legkolaks-use-item">
+                <div class="why-legkolaks-use-wrap">
+                  <div class="why-legkolaks-use-icon-wrap">
+                    <img
+                      class="why-legkolaks-use-icon"
+                      src="./assets/img/svg/icon-stomach.svg"
+                      alt="Stomac Icon"
+                      width="40"
+                      height="40"
+                    />
+                  </div>
+                  <p class="why-legkolaks-use-text">
+                    Способствует восстановлению естественного процесса испражнения<sup
+                      >1</sup
+                    >
+                  </p>
+                </div>
+              </li>
+              <li class="why-legkolaks-use-item">
+                <div class="why-legkolaks-use-wrap">
+                  <div class="why-legkolaks-use-icon-wrap">
+                    <img
+                      class="why-legkolaks-use-icon"
+                      src="./assets/img/svg/icon-stop.svg"
+                      alt="Stop Icon"
+                      width="40"
+                      height="40"
+                    />
+                  </div>
+                  <p class="why-legkolaks-use-text">
+                    Не вызывает колики в животе<sup>3</sup>
+                  </p>
+                </div>
+              </li>
+              <li class="why-legkolaks-use-item">
+                <div class="why-legkolaks-use-wrap">
+                  <div class="why-legkolaks-use-icon-wrap">
+                    <img
+                      class="why-legkolaks-use-icon"
+                      src="./assets/img/svg/icon-feather.svg"
+                      alt="Feather Icon"
+                      width="40"
+                      height="40"
+                    />
+                  </div>
+                  <p class="why-legkolaks-use-text">Действует эффективно и мягко</p>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="why-legkolaks-use-link">Как применять</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <h2 class="why-legkolaks-title h2-title">почему легколакс<sup>&reg;</sup></h2>
-        <p class="why-legkolaks-text">
-          У Легколакса другой механизм действия. В состав Легколакса входит молекула
-          <b>Макрогол 4000</b>. Она в первую очередь используется для лечения запора у
-          детей в Европе<sup>5</sup>.
-        </p>
-        <p class="why-legkolaks-text">
-          <b>Макрогол 4000</b> нормализует объем и консистенцию каловых масс благодаря
-          насыщению их водой. Это облегчает испражнение, не вызывая болевых ощущений.
-        </p>
-        <ul class="why-legkolaks-box-list">
-          <li class="why-legkolaks-box-item">
-            <div class="why-legkolaks-box-title-wrap">
-              <div class="why-legkolaks-box-pic">!</div>
-              <h2 class="why-legkolaks-box-title">важно!</h2>
-            </div>
-          </li>
-          <li class="why-legkolaks-box-item">
-            <p class="why-legkolaks-box-text">
-              ЛЕГКОЛАКС нормализует процесс испражнения.
-            </p>
-          </li>
-          <li class="why-legkolaks-box-item">
-            <div class="why-legkolaks-box-icon-wrap">
-              <div>
-                <svg class="why-legkolaks-box-icon" width="40" height="40">
-                  <use href="./assets/img/icons.svg#icon-calendar"></use>
-                </svg>
-              </div>
-              <p class="why-legkolaks-box-text">
-                Прием ЛЕГКОЛАКСА курсом 10-12 дней способствует сохранению необходимого
-                эффекта и после прекращения применения препарата.
-              </p>
-            </div>
-          </li>
-        </ul>
-        <ul class="why-legkolaks-use-list">
-          <li class="why-legkolaks-use-item">
-            <div class="why-legkolaks-use-wrap">
-              <div class="why-legkolaks-use-icon-wrap">
-                <svg class="why-legkolaks-use-icon" width="40" height="40">
-                  <use href="./assets/img/icons.svg#icon-timer"></use>
-                </svg>
-              </div>
-              <p class="why-legkolaks-use-text">Разрешен к длительному применению</p>
-            </div>
-          </li>
-          <li class="why-legkolaks-use-item">
-            <div class="why-legkolaks-use-wrap">
-              <div class="why-legkolaks-use-icon-wrap">
-                <svg class="why-legkolaks-use-icon" width="40" height="40">
-                  <use href="./assets/img/icons.svg#icon-stomach"></use>
-                </svg>
-              </div>
-              <p class="why-legkolaks-use-text">
-                Способствует восстановлению естественного процесса испражнения<sup>1</sup>
-              </p>
-            </div>
-          </li>
-          <li class="why-legkolaks-use-item">
-            <div class="why-legkolaks-use-wrap">
-              <div class="why-legkolaks-use-icon-wrap">
-                <svg class="why-legkolaks-use-icon" width="40" height="40">
-                  <use href="./assets/img/icons.svg#icon-stop"></use>
-                </svg>
-              </div>
-              <p class="why-legkolaks-use-text">
-                Не вызывает колики в животе<sup>3</sup>
-              </p>
-            </div>
-          </li>
-          <li class="why-legkolaks-use-item">
-            <div class="why-legkolaks-use-wrap">
-              <div class="why-legkolaks-use-icon-wrap">
-                <svg class="why-legkolaks-use-icon" width="40" height="40">
-                  <use href="./assets/img/icons.svg#icon-feather"></use>
-                </svg>
-              </div>
-              <p class="why-legkolaks-use-text">Действует эффективно и мягко</p>
-            </div>
-          </li>
-        </ul>
-        <a href="#" class="why-legkolaks-use-link">Как применять</a>
         <div class="why-legkolaks-use-video">
           <img
-            class="why-legkolaks-use-video-img"
+            class="why-legkolaks-use-video-img img"
             src="./assets/img/index/index-video-desk-1x.jpg"
             alt="People at the meeting"
             width="834"
@@ -324,86 +431,119 @@
             sizes="(max-width: 767px) 261px, (min-width: 768px) 834px"
           />
           <div class="why-legkolaks-use-video-icon-wrap">
-            <svg class="why-legkolaks-use-video-icon" width="32" height="32">
-              <use href="./assets/img/icons.svg#icon-play"></use>
-            </svg>
+            <img
+              class="why-legkolaks-use-video-icon"
+              src="./assets/img/svg/icon-play.svg"
+              alt="Play Icon"
+              width="32"
+              height="32"
+            />
           </div>
+          <div class="why-legkolaks-use-video-bubble-small"></div>
+          <div class="why-legkolaks-use-video-bubble-medium"></div>
         </div>
       </div>
     </section>
+
     <section class="how-to-use">
       <div class="container">
-        <div class="how-to-use-background">
-          <div class="how-to-use-bubble-medium"></div>
-          <img
-            class="how-to-use-img-woman"
-            src="./assets/img/index/index-how-to-use-happy-woman-desk-1x.png"
-            alt="Happy woman with girl"
-            width="351"
-            srcset="
-              ./assets/img/index/index-how-to-use-happy-woman-mob-1x.png  214w,
-              ./assets/img/index/index-how-to-use-happy-woman-mob-2x.png  428w,
-              ./assets/img/index/index-how-to-use-happy-woman-desk-1x.png 351w,
-              ./assets/img/index/index-how-to-use-happy-woman-desk-2x.png 702w
-            "
-            sizes="(max-width: 767px) 214px, (min-width: 768px) 351px"
-          />
-          <img
-            class="how-to-use-img-pack"
-            src="./assets/img/index/index-hero-legkolax-packs-desk-1x.png"
-            alt="Legkoglax packs"
-            width="288"
-            srcset="
-              ./assets/img/index/index-hero-legkolax-packs-mob-1x.png  129w,
-              ./assets/img/index/index-hero-legkolax-packs-mob-2x.png  258w,
-              ./assets/img/index/index-hero-legkolax-packs-desk-1x.png 288w,
-              ./assets/img/index/index-hero-legkolax-packs-desk-2x.png 576w
-            "
-            sizes="(max-width: 767px) 129px, (min-width: 768px) 288px"
-          />
+        <div class="how-to-use-desk-wrap">
+          <div class="how-to-use-background-wrap">
+            <div class="how-to-use-background">
+              <div class="how-to-use-bubble-medium"></div>
+              <div class="how-to-use-img-woman-wrap">
+                <img
+                  class="how-to-use-img-woman img"
+                  src="./assets/img/index/index-how-to-use-happy-woman-desk-1x.png"
+                  alt="Happy woman with girl"
+                  width="351"
+                  srcset="
+                    ./assets/img/index/index-how-to-use-happy-woman-mob-1x.png  214w,
+                    ./assets/img/index/index-how-to-use-happy-woman-mob-2x.png  428w,
+                    ./assets/img/index/index-how-to-use-happy-woman-desk-1x.png 351w,
+                    ./assets/img/index/index-how-to-use-happy-woman-desk-2x.png 702w
+                  "
+                  sizes="(max-width: 767px) 214px, (min-width: 768px) 351px"
+                />
+              </div>
+              <div class="how-to-use-img-pack-wrap">
+                <img
+                  class="how-to-use-img-pack img"
+                  src="./assets/img/index/index-hero-legkolax-packs-desk-1x.png"
+                  alt="Legkoglax packs"
+                  width="288"
+                  srcset="
+                    ./assets/img/index/index-hero-legkolax-packs-mob-1x.png  129w,
+                    ./assets/img/index/index-hero-legkolax-packs-mob-2x.png  258w,
+                    ./assets/img/index/index-hero-legkolax-packs-desk-1x.png 288w,
+                    ./assets/img/index/index-hero-legkolax-packs-desk-2x.png 576w
+                  "
+                  sizes="(max-width: 767px) 129px, (min-width: 768px) 288px"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="how-to-use-title-desk-wrap">
+            <h2 class="how-to-use-title h2-title">
+              как применять легколакс<sup>&reg;</sup>
+            </h2>
+            <div class="how-to-use-subtitle-desk-wrap">
+              <p class="how-to-use-subtitle">легкое решение при запоре</p>
+              <a href="#" class="how-to-use-link">Инструкция</a>
+            </div>
+            <ul class="how-to-use-list">
+              <li class="how-to-use-item">
+                <div class="how-to-use-wrap">
+                  <div class="how-to-use-wrap-icon">
+                    <img
+                      class="how-to-use-icon"
+                      src="./assets/img/svg/icon-clock.svg"
+                      alt="Stop Icon"
+                      width="40"
+                      height="40"
+                    />
+                  </div>
+                  <p class="how-to-use-text">
+                    Легколакс рекомендуется принимать утром во время еды, за один прием
+                  </p>
+                </div>
+              </li>
+              <li class="how-to-use-item">
+                <div class="how-to-use-wrap">
+                  <div class="how-to-use-wrap-icon">
+                    <img
+                      class="how-to-use-icon"
+                      src="./assets/img/svg/icon-glass.svg"
+                      alt="Stop Icon"
+                      width="40"
+                      height="40"
+                    />
+                  </div>
+                  <p class="how-to-use-text">
+                    Содержание пакета-саше следует растворить в стакане воды, прозрачного
+                    сока или холодного чая
+                  </p>
+                </div>
+              </li>
+              <li class="how-to-use-item">
+                <div class="how-to-use-wrap">
+                  <div class="how-to-use-wrap-icon">
+                    <img
+                      class="how-to-use-icon"
+                      src="./assets/img/svg/icon-drop.svg"
+                      alt="Stop Icon"
+                      width="40"
+                      height="40"
+                    />
+                  </div>
+                  <p class="how-to-use-text">
+                    Легколакс имеет нейтральный вкус и не имеет запаха
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-        <h2 class="how-to-use-title h2-title">как применять легколакс<sup>&reg;</sup></h2>
-        <p class="how-to-use-subtitle">легкое решение при запоре</p>
-        <a href="#" class="how-to-use-link">Инструкция</a>
-        <ul class="how-to-use-list">
-          <li class="how-to-use-item">
-            <div class="how-to-use-wrap">
-              <div class="how-to-use-wrap-icon">
-                <svg class="how-to-use-icon" width="40" height="40">
-                  <use href="./assets/img/icons.svg#icon-clock"></use>
-                </svg>
-              </div>
-              <p class="how-to-use-text">
-                Легколакс рекомендуется принимать утром во время еды, за один прием
-              </p>
-            </div>
-          </li>
-          <li class="how-to-use-item">
-            <div class="how-to-use-wrap">
-              <div class="how-to-use-wrap-icon">
-                <svg class="how-to-use-icon" width="40" height="40">
-                  <use href="./assets/img/icons.svg#icon-glass"></use>
-                </svg>
-              </div>
-              <p class="how-to-use-text">
-                Содержание пакета-саше следует растворить в стакане воды, прозрачного сока
-                или холодного чая
-              </p>
-            </div>
-          </li>
-          <li class="how-to-use-item">
-            <div class="how-to-use-wrap">
-              <div class="how-to-use-wrap-icon">
-                <svg class="how-to-use-icon" width="40" height="40">
-                  <use href="./assets/img/icons.svg#icon-drop"></use>
-                </svg>
-              </div>
-              <p class="how-to-use-text">
-                Легколакс имеет нейтральный вкус и не имеет запаха
-              </p>
-            </div>
-          </li>
-        </ul>
         <div class="how-to-use-age-box">
           <ul class="how-to-use-age-box-list">
             <li class="how-to-use-age-box-item-first">
@@ -477,16 +617,33 @@
     <div class="contraindications">
       <ul class="contraindications-list">
         <li class="contraindications-item">
-          <svg class="contraindications-icon" width="310" height="27">
-            <use href="./assets/img/icons.svg#icon-contraindications"></use>
-          </svg>
+          <img
+            class="contraindications-icon-mob"
+            src="./assets/img/svg/icon-contraindications.svg"
+            alt="Stop Icon"
+            width="310"
+            height="27"
+          />
         </li>
         <li class="contraindications-item">
-          <svg class="contraindications-icon" width="310" height="31">
-            <use href="./assets/img/icons.svg#icon-instruction"></use>
-          </svg>
+          <img
+            class="contraindications-icon-mob"
+            src="./assets/img/svg/icon-instruction.svg"
+            alt="Stop Icon"
+            width="310"
+            height="31"
+          />
         </li>
       </ul>
+      <div class="contraindications-desk-wrap">
+        <img
+          class="contraindications-icon"
+          src="./assets/img/svg/icon-contraindications-desk.svg"
+          alt="Stop Icon"
+          width="1408"
+          height="62"
+        />
+      </div>
     </div>
     <script src="./assets/js/mob-menu.js"></script>
   </body>
