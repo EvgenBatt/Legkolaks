@@ -23,7 +23,7 @@
   --body-bcg: #ffffff;
 
   /* background wrap width */
-  --mob-background-wrap: 320px;
+  --mob-background-image: 320px;
   --mob-background-how-to-use-wrap: 292px;
   --mob768-hero-background-wrap: 768px;
   --tab-hero-background-wrap: 1024px;
@@ -32,6 +32,8 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
   color: var(--text-color);
   background-color: var(--body-bcg);
   overflow-x: hidden;

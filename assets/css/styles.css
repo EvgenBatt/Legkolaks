@@ -1,8 +1,35 @@
 /* Common styles */
 
 .container {
-  overflow: hidden;
+  min-width: 260px;
+  max-width: 1157px;
+  padding: 0px 24px;
+  margin: 0 auto;
+}
+
+.header-container {
+  min-width: 260px;
+  max-width: 1248px;
+  padding: 0px 12px;
+  margin: 0 auto;
+}
+
+.hero-container {
+  min-width: 260px;
+  max-width: 1248px;
+  padding: 0px 24px;
+  margin: 0 auto;
+}
+
+.about-features-container,
+.why-legkolaks-use-video {
   width: 100%;
+  margin: 0 auto;
+}
+
+.how-to-use-container {
+  min-width: 252px;
+  max-width: 1058px;
   padding: 0px 24px;
   margin: 0 auto;
 }
@@ -27,10 +54,6 @@
   padding-top: 9px;
   padding-bottom: 9px;
   box-shadow: var(--header-shadow);
-}
-
-.header > .container {
-  padding: 0px 12px;
 }
 
 .header-container {
@@ -94,22 +117,25 @@
 
 /* pharmacy style */
 
+.pharmacy-link-btn {
+  background-color: #fcc400;
+  border-radius: 60px;
+  padding: 8px 18px;
+}
+
 .pharmacy-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 18px;
   font-family: "PF Square Sans Pro", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.21;
   color: #333333;
-  background-color: #fcc400;
-  border-radius: 60px;
 }
 
 @media screen and (max-width: 309px) {
-  .pharmacy-link {
+  .pharmacy-link-btn {
     display: none;
   }
 }
@@ -127,31 +153,20 @@
 /* mobile menu button */
 
 .header-mob-menu-btn {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   width: 32px;
-  height: 24px;
+  height: 19px;
   border: none;
   margin-left: 16px;
   background-color: transparent;
   transition: all 300ms ease-in-out;
+  position: relative;
 }
 
-@media screen and (min-width: 375px) {
-  .header-mob-menu-btn {
-    margin-left: 28px;
-  }
-}
-
-/* Add class on button click "show-cross" */
-.header-mob-menu-btn:focus,
-.header-mob-menu-btn:active,
-.header-mob-menu-btn.show-cross {
-  outline: none;
-}
-
+.header-mob-menu-btn:before,
+.header-mob-menu-btn:after,
 .header-mob-menu-line {
+  content: "";
+  position: absolute;
   width: 100%;
   height: 3px;
   background-color: var(--header-mob-menu-bcg);
@@ -159,19 +174,39 @@
   transition: all 300ms ease-in-out;
 }
 
-/* Style to first line */
-.header-mob-menu-btn.show-cross .header-mob-menu-line:first-child {
-  transform: rotate(45deg) translate(30%, 70%); /* Rotate 45 degrees and move right and down */
+.header-mob-menu-btn:before {
+  top: 0;
+  left: 0;
 }
 
-/* Style to second line */
-.header-mob-menu-btn.show-cross .header-mob-menu-line:nth-child(2) {
-  opacity: 0; /* Hiding line */
+.header-mob-menu-line {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-/* Style to third line */
-.header-mob-menu-btn.show-cross .header-mob-menu-line:last-child {
-  transform: rotate(-45deg) translate(28%, -70%); /* Rotate -45 degrees and move right and up */
+.header-mob-menu-btn:after {
+  bottom: 0;
+  right: 0;
+}
+
+.show-cross.header-mob-menu-btn:after {
+  transform: rotate(135deg) translate(-30%, 70%);
+}
+
+.show-cross .header-mob-menu-line {
+  transform: scale(0);
+}
+
+.show-cross.header-mob-menu-btn:before {
+  transform: rotate(-135deg) translate(-30%, -70%);
+}
+
+/* Add class on button click "show-cross" */
+.header-mob-menu-btn:focus,
+.header-mob-menu-btn:active,
+.header-mob-menu-btn.show-cross {
+  outline: none;
 }
 
 /* language box style */
@@ -218,85 +253,56 @@
   padding-bottom: 28px;
 }
 
-.hero-background-wrap {
-  position: relative;
-  max-width: var(--mob-background-wrap);
-  margin: 0 auto;
-  padding: 0 0 12px;
-}
-
 .hero-background {
   background-image: linear-gradient(180deg, #2687c6 28.65%, #11e4fc 100%);
   border-radius: 20px;
   border-top-right-radius: 80px;
   border-bottom-left-radius: 80px;
-  width: 100%;
+  max-width: var(--mob-background-image);
   padding: 66px 0 210px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.hero-title-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-title {
   font-family: "Arimo", sans-serif;
   font-weight: 400;
   font-size: 35px;
-  line-height: 0.8;
+  line-height: 1.11;
   color: var(--hero-h1-color);
   text-transform: uppercase;
-  text-align: center;
+  margin-bottom: 5px;
 }
 
 .hero-subtitle {
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  line-height: 1.5;
+  color: var(--hero-h1-color);
+  text-transform: uppercase;
+  margin-left: -15px;
 }
 
-.hero-woman-img-wrap {
-  position: absolute;
-  bottom: 12px;
-  left: 60%;
-  transform: translateX(-50%);
-  z-index: 2;
-  width: 180px;
-}
-
-.hero-legkolax_packs-img-wrap {
+.hero-woman-img-pic {
   position: absolute;
   bottom: 0;
-  left: 35%;
-  transform: translateX(-75%);
-  z-index: 3;
-  width: 128px;
-}
-
-.hero-bubble-small {
-  position: absolute;
-  top: 15px;
-  right: 62%;
-  transform: translateX(-100%) rotate(-39.67deg);
+  left: 60%;
+  transform: translateX(-60%);
   z-index: 1;
-  height: 36px;
-  width: 36px;
-  border-radius: 50%;
-  background-image: linear-gradient(171.43deg, #5beeff 6.54%, #25bbfe 44.33%);
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+  width: 225px;
 }
 
-@media screen and (max-width: 767px) {
-  .hero-bubble-medium {
-    display: none;
-  }
-}
-
-.hero-bubble-large {
+.hero-legkolax_packs-img-pic {
   position: absolute;
-  bottom: 62px;
-  left: 62%;
-  transform: translateX(-100%) rotate(-39.67deg);
-  z-index: 1;
-  height: 115px;
-  width: 115px;
-  border-radius: 50%;
-  background-image: linear-gradient(171.43deg, #5beeff 6.54%, #25bbfe 44.33%);
-  box-shadow: 0px 1.42412px 4.27237px rgba(0, 0, 0, 0.1);
+  bottom: -4%;
+  left: 60%;
+  transform: translateX(-128%);
+  z-index: 2;
+  width: 129px;
 }
 
 /* ABOUT Section Style */
@@ -858,8 +864,8 @@
 @media screen and (min-width: 768px) {
   /* Common styles */
 
-  .container {
-    padding: 0 48px;
+  .header-container {
+    padding: 0 24px;
   }
 
   /* HEADER Section Styles */
@@ -867,10 +873,6 @@
   .header {
     padding-top: 12px;
     padding-bottom: 12px;
-  }
-
-  .header > .container {
-    padding: 0px 24px;
   }
 
   .logo-icon {
@@ -906,20 +908,22 @@
 
   /* pharmacy style */
 
-  .pharmacy-link {
+  .pharmacy-link-btn {
     padding: 10px 26px;
   }
 
   /* mobile menu button */
 
   .header-mob-menu-btn {
-    width: 44px;
-    height: 31px;
+    width: 40px;
+    height: 21px;
     margin-left: 60px;
   }
 
+  .header-mob-menu-btn:before,
+  .header-mob-menu-btn:after,
   .header-mob-menu-line {
-    height: 4px;
+    height: 3px;
   }
 
   /* HERO Section Style */
@@ -929,52 +933,28 @@
     padding-bottom: 38px;
   }
 
-  .hero-background-wrap {
+  .hero-background {
     max-width: var(--mob768-hero-background-wrap);
-    padding: 12px 0 0;
   }
 
   .hero-title-wrap {
     position: absolute;
-    top: 24%;
+    top: 15%;
     left: 55%;
   }
 
-  .hero-woman-img-wrap {
+  .hero-woman-img-pic {
     bottom: 0;
     left: 20%;
     transform: translateX(-20%);
-    width: 256px;
+    width: 260px;
   }
 
-  .hero-legkolax_packs-img-wrap {
+  .hero-legkolax_packs-img-pic {
     bottom: 24px;
-    left: 64%;
+    left: 63%;
     transform: translateX(-20%);
     width: 168px;
-  }
-
-  .hero-bubble-small {
-    top: 28px;
-    right: 78%;
-  }
-
-  .hero-bubble-medium {
-    position: absolute;
-    top: 45px;
-    right: 50%;
-    transform: translateX(-25%);
-    z-index: 1;
-    height: 52px;
-    width: 52px;
-    border-radius: 50%;
-    background-image: linear-gradient(180deg, #5beeff 0%, #25bbfe 100%);
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .hero-bubble-large {
-    bottom: 45px;
-    left: 30%;
   }
 
   /* ABOUT Section Style */
@@ -1168,10 +1148,6 @@
     padding-bottom: 16px;
   }
 
-  .header > .container {
-    padding: 0px 48px;
-  }
-
   /* logo style */
 
   .logo-icon {
@@ -1195,14 +1171,16 @@
   }
 
   /* pharmacy style */
-
-  .pharmacy-link {
+  .pharmacy-link-btn {
     margin-left: auto;
     margin-right: 40px;
     padding: 10px 24px;
-    color: #ffffff;
     border: 1px solid #ffc700;
     border-radius: 20px 60px;
+  }
+
+  .pharmacy-link {
+    color: #ffffff;
     font-size: 16px;
   }
 
@@ -1237,53 +1215,26 @@
     padding-bottom: 62px;
   }
 
-  .hero-background-wrap {
-    max-width: var(--tab-hero-background-wrap);
-    padding: 20px 0 0;
-  }
-
   .hero-background {
     padding: 160px 0 160px;
+    max-width: var(--tab-hero-background-wrap);
   }
 
   .hero-title {
     font-size: 42px;
-    line-height: 0.9;
   }
 
   .hero-subtitle {
     font-size: 17px;
   }
 
-  .hero-woman-img-wrap {
+  .hero-woman-img-pic {
     width: 300px;
   }
 
-  .hero-legkolax_packs-img-wrap {
+  .hero-legkolax_packs-img-pic {
     bottom: 30px;
-    left: 65%;
     width: 186px;
-  }
-
-  .hero-bubble-small {
-    width: 34px;
-    height: 34px;
-    top: 45px;
-    background-image: linear-gradient(196deg, #5beeff 6.54%, #25bbfe 78.33%);
-  }
-
-  .hero-bubble-medium {
-    top: 40px;
-    right: 51%;
-    width: 76px;
-    height: 76px;
-    background-image: linear-gradient(244.57deg, #11e4fc 17.29%, #25bbfe 55.89%);
-  }
-
-  .hero-bubble-large {
-    bottom: 55px;
-    left: 27%;
-    background-image: linear-gradient(180deg, #5beeff 16.67%, #25bbfe 100%);
   }
 
   /* ABOUT Section Style */
@@ -1491,10 +1442,6 @@
 @media screen and (min-width: 1440px) {
   /* Common styles */
 
-  .container {
-    padding: 0px 120px;
-  }
-
   .h2-title {
     font-size: 40px;
     line-height: 1.25;
@@ -1505,10 +1452,6 @@
   .header {
     padding-top: 15px;
     padding-bottom: 15px;
-  }
-
-  .header > .container {
-    padding: 0px 120px;
   }
 
   /* logo style */
@@ -1530,9 +1473,12 @@
 
   /* pharmacy style */
 
-  .pharmacy-link {
+  .pharmacy-link-btn {
     margin-right: 79px;
     padding: 12px 28px;
+  }
+
+  .pharmacy-link {
     font-size: 18px;
     line-height: 1.44;
   }
@@ -1550,21 +1496,17 @@
     padding-bottom: 100px;
   }
 
-  .hero-background-wrap {
-    max-width: var(--desk-hero-background-wrap);
-    padding: 27px 0 0;
-  }
-
   .hero-background {
     padding: 260px 0 260px;
     border-radius: 30px;
     border-top-right-radius: 150px;
     border-bottom-left-radius: 150px;
+    max-width: 100%;
   }
 
   .hero-title-wrap {
-    top: 102px;
-    left: 610px;
+    top: 20%;
+    left: 52%;
   }
 
   .hero-title {
@@ -1576,37 +1518,15 @@
     font-size: 27px;
   }
 
-  .hero-woman-img-wrap {
-    left: 82px;
-    transform: none;
-    width: 485px;
+  .hero-woman-img-pic {
+    width: 100%;
+    left: 28%;
   }
 
-  .hero-legkolax_packs-img-wrap {
+  .hero-legkolax_packs-img-pic {
     bottom: 60px;
     left: 672px;
-    width: 288px;
-  }
-
-  .hero-bubble-small {
-    width: 52px;
-    height: 52px;
-    top: 76px;
-    left: 150px;
-  }
-
-  .hero-bubble-medium {
-    top: 86px;
-    right: 630px;
-    width: 104px;
-    height: 104px;
-  }
-
-  .hero-bubble-large {
-    bottom: 78px;
-    left: 285px;
-    width: 185px;
-    height: 185px;
+    width: 100%;
   }
 
   /* ABOUT Section Style */
@@ -1914,19 +1834,20 @@
     gap: 16px;
   }
 
-.how-to-use-age-box-list {
-  flex-basis: calc((100% - 4 * 16px) / 5);
-  height: 100%;
-}
+  .how-to-use-age-box-list {
+    flex-basis: calc((100% - 4 * 16px) / 5);
+    height: 100%;
+  }
 
-.how-to-use-age-box-text-first {
-  line-height: 1.38;
-}
+  .how-to-use-age-box-text-first {
+    line-height: 1.38;
+  }
 
-.how-to-use-age-box-item-first, .how-to-use-age-box-item {
-  height: calc(171px / 2);
-  padding: 20px;
-}
+  .how-to-use-age-box-item-first,
+  .how-to-use-age-box-item {
+    height: calc(171px / 2);
+    padding: 20px;
+  }
 
   /* Footer Section Style */
 

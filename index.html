@@ -21,7 +21,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="container header-container">
+      <div class="header-container">
         <a href="./index.html" class="logo">
           <img
             class="logo-icon"
@@ -54,17 +54,19 @@
             <li class="lang-mob-item"><a href="#" class="lang-uz">uz</a></li>
           </ul>
         </div>
-        <a href="#" class="pharmacy-link">
-          <img
-            class="pharmacy-icon"
-            src="./assets/img/svg/icon-cart.svg"
-            alt="Pharmacy Icon"
-            width="16"
-            height="15"
-          />
-          <span class="pharmacy-text-mob">Аптеки</span>
-          <span class="pharmacy-text-desk">Найти в аптеках</span>
-        </a>
+        <div class="pharmacy-link-btn">
+          <a href="#" class="pharmacy-link">
+            <img
+              class="pharmacy-icon"
+              src="./assets/img/svg/icon-cart.svg"
+              alt="Pharmacy Icon"
+              width="16"
+              height="15"
+            />
+            <span class="pharmacy-text-mob">Аптеки</span>
+            <span class="pharmacy-text-desk">Найти в аптеках</span>
+          </a>
+        </div>
         <ul class="lang-list">
           <li class="lang-item"><a href="#" class="lang-ru">ru</a></li>
           <li class="lang-item"><span class="lang-pipeline">|</span></li>
@@ -77,61 +79,52 @@
           type="button"
         >
           <span class="header-mob-menu-line"></span>
-          <span class="header-mob-menu-line"></span>
-          <span class="header-mob-menu-line"></span>
         </button>
       </div>
     </header>
-
+    <!--------------- HERO Section --------------->
     <section class="hero">
-      <div class="container">
-        <div class="hero-background-wrap">
-          <div class="hero-background">
-            <div class="hero-title-wrap">
-              <h1 class="hero-title">
-                легколакс<sup>&reg;</sup><br />
-                <span class="hero-subtitle">легкое решение при запоре</span>
-              </h1>
-            </div>
-            <div class="hero-woman-img-wrap">
-              <img
-                class="hero-woman-img img"
-                src="./assets/img/index/index-hero-woman-desk-1x.png"
-                alt="Woman says: I am ok"
-                width="485"
-                srcset="
-                  ./assets/img/index/index-hero-woman-mob-1x.png  180w,
-                  ./assets/img/index/index-hero-woman-mob-2x.png  360w,
-                  ./assets/img/index/index-hero-woman-desk-1x.png 485w,
-                  ./assets/img/index/index-hero-woman-desk-2x.png 970w
-                "
-                sizes="(max-width: 767px) 180px, (min-width: 768px) 485px"
-              />
-            </div>
-            <div class="hero-legkolax_packs-img-wrap">
-              <img
-                class="hero-legkolax_packs-img img"
-                src="./assets/img/index/index-hero-legkolax-packs-desk-1x.png"
-                alt="Legkoglax packs"
-                width="288"
-                srcset="
-                  ./assets/img/index/index-hero-legkolax-packs-mob-1x.png  129w,
-                  ./assets/img/index/index-hero-legkolax-packs-mob-2x.png  258w,
-                  ./assets/img/index/index-hero-legkolax-packs-desk-1x.png 288w,
-                  ./assets/img/index/index-hero-legkolax-packs-desk-2x.png 576w
-                "
-                sizes="(max-width: 767px) 129px, (min-width: 768px) 288px"
-              />
-            </div>
-            <div class="hero-bubble-small"></div>
-            <div class="hero-bubble-medium"></div>
-            <div class="hero-bubble-large"></div>
+      <div class="hero-container">
+        <div class="hero-background">
+          <div class="hero-title-wrap">
+            <h1 class="hero-title">легколакс<sup>&reg;</sup><br /></h1>
+            <p class="hero-subtitle">легкое решение при запоре</p>
+          </div>
+          <div class="hero-woman-img-pic">
+            <img
+              class="img"
+              src="./assets/img/index/index-hero-woman-desk-1x.png"
+              alt="Woman says: I am ok"
+              width="485"
+              srcset="
+                ./assets/img/index/index-hero-woman-mob-1x.png  225w,
+                ./assets/img/index/index-hero-woman-mob-2x.png  450w,
+                ./assets/img/index/index-hero-woman-desk-1x.png 485w,
+                ./assets/img/index/index-hero-woman-desk-2x.png 970w
+              "
+              sizes="(max-width: 767px) 225px, (min-width: 768px) 485px"
+            />
+          </div>
+          <div class="hero-legkolax_packs-img-pic">
+            <img
+              class="img"
+              src="./assets/img/index/index-hero-legkolax-packs-desk-1x.png"
+              alt="Legkoglax packs"
+              width="288"
+              srcset="
+                ./assets/img/index/index-hero-legkolax-packs-mob-1x.png  129w,
+                ./assets/img/index/index-hero-legkolax-packs-mob-2x.png  258w,
+                ./assets/img/index/index-hero-legkolax-packs-desk-1x.png 288w,
+                ./assets/img/index/index-hero-legkolax-packs-desk-2x.png 576w
+              "
+              sizes="(max-width: 767px) 129px, (min-width: 768px) 288px"
+            />
           </div>
         </div>
       </div>
     </section>
-
-    <section class="about">
+<!--------------- ABOUT Section --------------->
+    <!-- <section class="about">
       <div class="container">
         <div class="about-bubble-medium"></div>
         <div class="about-desk-wrap">
@@ -182,7 +175,8 @@
             </li>
           </ul>
         </div>
-
+      </div>
+      <div class="about-features-container">
         <div class="about-features-background">
           <div class="about-features-bubble-small"></div>
           <ul class="about-features-list">
@@ -416,37 +410,38 @@
             </ul>
           </div>
         </div>
-        <div class="why-legkolaks-use-video">
+      </div>
+
+      <div class="why-legkolaks-use-video">
+        <img
+          class="why-legkolaks-use-video-img img"
+          src="./assets/img/index/index-video-desk-1x.jpg"
+          alt="People at the meeting"
+          width="834"
+          srcset="
+            ./assets/img/index/index-video-mob-1x.jpg   261w,
+            ./assets/img/index/index-video-mob-2x.jpg   522w,
+            ./assets/img/index/index-video-desk-1x.jpg  834w,
+            ./assets/img/index/index-video-desk-2x.jpg 1668w
+          "
+          sizes="(max-width: 767px) 261px, (min-width: 768px) 834px"
+        />
+        <div class="why-legkolaks-use-video-icon-wrap">
           <img
-            class="why-legkolaks-use-video-img img"
-            src="./assets/img/index/index-video-desk-1x.jpg"
-            alt="People at the meeting"
-            width="834"
-            srcset="
-              ./assets/img/index/index-video-mob-1x.jpg   261w,
-              ./assets/img/index/index-video-mob-2x.jpg   522w,
-              ./assets/img/index/index-video-desk-1x.jpg  834w,
-              ./assets/img/index/index-video-desk-2x.jpg 1668w
-            "
-            sizes="(max-width: 767px) 261px, (min-width: 768px) 834px"
+            class="why-legkolaks-use-video-icon"
+            src="./assets/img/svg/icon-play.svg"
+            alt="Play Icon"
+            width="32"
+            height="32"
           />
-          <div class="why-legkolaks-use-video-icon-wrap">
-            <img
-              class="why-legkolaks-use-video-icon"
-              src="./assets/img/svg/icon-play.svg"
-              alt="Play Icon"
-              width="32"
-              height="32"
-            />
-          </div>
-          <div class="why-legkolaks-use-video-bubble-small"></div>
-          <div class="why-legkolaks-use-video-bubble-medium"></div>
         </div>
+        <div class="why-legkolaks-use-video-bubble-small"></div>
+        <div class="why-legkolaks-use-video-bubble-medium"></div>
       </div>
     </section>
 
     <section class="how-to-use">
-      <div class="container">
+      <div class="how-to-use-container">
         <div class="how-to-use-desk-wrap">
           <div class="how-to-use-background-wrap">
             <div class="how-to-use-background">
@@ -544,6 +539,7 @@
             </ul>
           </div>
         </div>
+
         <div class="how-to-use-age-box">
           <ul class="how-to-use-age-box-list">
             <li class="how-to-use-age-box-item-first">
@@ -587,8 +583,9 @@
           </ul>
         </div>
       </div>
-    </section>
-    <footer class="footer">
+    </section> -->
+
+    <!-- <footer class="footer">
       <ul class="footer-list">
         <li class="footer-item">
           <p class="footer-text">
@@ -644,7 +641,7 @@
           height="62"
         />
       </div>
-    </div>
+    </div> -->
     <script src="./assets/js/mob-menu.js"></script>
   </body>
 </html>
