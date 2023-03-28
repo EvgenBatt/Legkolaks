@@ -1791,6 +1791,10 @@
 
   /* Footer Section Style */
 
+  .footer {
+    padding-bottom: 96px;
+  }
+
   .contraindications {
     padding: 12px 16px;
   }
