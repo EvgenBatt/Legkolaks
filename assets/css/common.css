@@ -23,11 +23,10 @@
   --body-bcg: #ffffff;
 
   /* background wrap width */
-  --mob-background-image: 320px;
-  --mob-background-how-to-use-wrap: 292px;
+  --mob-background-hero: 320px;
+  --mob-background-image: 272px;
   --mob768-hero-background-wrap: 768px;
   --tab-hero-background-wrap: 1024px;
-  --desk-hero-background-wrap: 1200px;
 }
 
 body {

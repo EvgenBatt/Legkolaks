@@ -2,7 +2,7 @@
 
 .container {
   min-width: 260px;
-  max-width: 1157px;
+  max-width: 1277px;
   padding: 0px 24px;
   margin: 0 auto;
 }
@@ -23,14 +23,20 @@
 
 .about-features-container,
 .why-legkolaks-use-video {
-  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
 }
 
 .how-to-use-container {
   min-width: 252px;
-  max-width: 1058px;
+  max-width: 1250px;
   padding: 0px 24px;
+  margin: 0 auto;
+}
+
+.footer-container {
+  max-width: 1440px;
+  padding: 0 30px;
   margin: 0 auto;
 }
 
@@ -117,25 +123,23 @@
 
 /* pharmacy style */
 
-.pharmacy-link-btn {
-  background-color: #fcc400;
-  border-radius: 60px;
-  padding: 8px 18px;
-}
-
 .pharmacy-link {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 8px 18px;
   font-family: "PF Square Sans Pro", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.21;
   color: #333333;
+  background-color: #fcc400;
+  border-radius: 60px;
+  text-align: center;
 }
 
 @media screen and (max-width: 309px) {
-  .pharmacy-link-btn {
+  .pharmacy-link {
     display: none;
   }
 }
@@ -258,7 +262,7 @@
   border-radius: 20px;
   border-top-right-radius: 80px;
   border-bottom-left-radius: 80px;
-  max-width: var(--mob-background-image);
+  max-width: var(--mob-background-hero);
   padding: 66px 0 210px;
   position: relative;
   margin: 0 auto;
@@ -308,7 +312,13 @@
 /* ABOUT Section Style */
 
 .about {
-  padding-bottom: 76px;
+  padding-bottom: 72px;
+}
+
+@media screen and (max-width: 1439px) {
+  .about-bubble-medium {
+    display: none;
+  }
 }
 
 .about-title {
@@ -333,10 +343,9 @@
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-bottom: 40px;
 }
 
-.about-img-wrap {
+.about-img-pic {
   width: 126px;
 }
 
@@ -358,10 +367,16 @@
 /* about features style */
 
 .about-features-background {
-  background-image: url(../img/svg/icon-thread-desk2.svg);
+  padding: 40px 0 40px;
+  background-image: url(../img/svg/icon-thread-mob.svg);
   background-repeat: no-repeat;
-  background-position: center left 80%;
-  background-size: cover;
+  background-position: bottom 5% left 79%;
+}
+
+@media screen and (max-width: 1023px) {
+  .about-features-bubble-small {
+    display: none;
+  }
 }
 
 .about-features-list {
@@ -369,12 +384,8 @@
   align-items: center;
   justify-content: center;
   gap: 16px;
-}
-
-@media screen and (max-width: 767px) {
-  .about-features-item {
-    flex-basis: calc((100% - 2 * 16px) / 3);
-  }
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 .about-features-link {
@@ -410,6 +421,7 @@
   justify-content: center;
   align-items: center;
   gap: 4px;
+  flex-basis: calc((100% - 4px) / 2);
 }
 
 .about-features-title {
@@ -429,15 +441,7 @@
 /* WHY LEGKOLAKS Section Style */
 
 .why-legkolaks {
-  padding-bottom: 76px;
-}
-
-.why-legkolaks-background-wrap {
-  position: relative;
-  padding-top: 22px;
-  margin: 0 auto;
-  margin-bottom: 28px;
-  max-width: var(--mob-background-wrap);
+  padding-bottom: 32px;
 }
 
 .why-legkolaks-background {
@@ -446,9 +450,13 @@
   border-top-right-radius: 60px;
   border-bottom-left-radius: 60px;
   padding: 70px 0 100px;
+  position: relative;
+  max-width: var(--mob-background-image);
+  margin: 0 auto;
+  margin-bottom: 28px;
 }
 
-.why-legkolaks-img-wrap {
+.why-legkolaks-img-pic {
   position: absolute;
   bottom: -1px;
   left: 50%;
@@ -489,9 +497,13 @@
   margin-bottom: 16px;
 }
 
-.why-legkolaks-box-title-wrap {
+.why-legkolaks-box-item {
   display: flex;
   align-items: center;
+}
+
+.why-legkolaks-box-item:last-child {
+  align-items: flex-start;
 }
 
 .why-legkolaks-box-pic {
@@ -521,9 +533,8 @@
   line-height: 1.56;
 }
 
-.why-legkolaks-box-wrap {
-  display: flex;
-  gap: 12px;
+.why-legkolaks-box-icon {
+  margin-right: 12px;
 }
 
 /* why legkolaks use style */
@@ -532,22 +543,17 @@
   margin-bottom: 28px;
 }
 
-.why-legkolaks-use-list {
-  margin: 0 auto;
-  margin-bottom: 28px;
-}
-
 .why-legkolaks-use-item:not(:last-child) {
   margin-bottom: 16px;
 }
 
-.why-legkolaks-use-wrap {
+.why-legkolaks-use-item {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.why-legkolaks-use-icon-wrap {
+.why-legkolaks-use-icon {
   width: 40px;
   height: 40px;
 }
@@ -561,28 +567,28 @@
 .why-legkolaks-use-link {
   display: block;
   width: 155px;
-  margin: 0 auto;
   padding: 12px 16px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
-  text-align: center;
   color: #ffffff;
+  margin: 0 auto;
   background-color: #fcc400;
   border: 1px solid #ffc700;
   border-radius: 20px 60px;
+  text-align: center;
 }
 
 .why-legkolaks-use-video {
-  background-image: url(../img/svg/icon-thread-desk2.svg);
+  background-image: url(../img/svg/icon-thread-mob.svg);
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background-position: bottom 10% left 35%;
   position: relative;
+  padding: 28px 0 28px;
 }
 
 .why-legkolaks-use-video-img {
-  width: 261px;
+  padding: 0 24px;
   margin: 0 auto;
 }
 
@@ -601,50 +607,37 @@
 }
 
 .how-to-use-background-wrap {
-  position: relative;
-  max-width: var(--mob-background-how-to-use-wrap);
   margin: 0 auto;
   padding: 16px 0 25px 28px;
   margin-bottom: 28px;
+  max-width: var(--mob-background-image);
+  position: relative;
 }
 
 .how-to-use-background {
-  background-image: linear-gradient(180deg, #2686c5 0%, #49c5fb 100%);
+  background-image: linear-gradient(180deg, #2687c6 28.65%, #11e4fc 100%);
   border-radius: 20px;
   border-top-right-radius: 80px;
   border-bottom-left-radius: 80px;
-  padding: 132px 0 90px;
+  padding: 111px 0 111px;
 }
 
-.how-to-use-bubble-medium {
+.how-to-use-img-woman-pic {
   position: absolute;
-  top: 27%;
-  left: 50%;
-  transform: translateX(-145%);
-  height: 67px;
-  width: 67px;
-  border-radius: 50%;
-  background-image: linear-gradient(244.57deg, #11e4fc 17.29%, #25bbfe 55.89%);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-}
-
-.how-to-use-img-woman-wrap {
-  position: absolute;
-  bottom: 23px;
-  left: 60%;
-  transform: translateX(-50%);
+  bottom: 9%;
+  left: 95%;
+  transform: translateX(-95%);
   z-index: 2;
-  width: 214px;
+  width: 234px;
 }
 
-.how-to-use-img-pack-wrap {
+.how-to-use-img-pack-pic {
   position: absolute;
-  bottom: 0;
-  right: 45%;
-  transform: translateX(0%);
+  bottom: -5px;
+  left: 0;
+  transform: translateX(0);
   z-index: 3;
-  width: 150px;
+  width: 151px;
 }
 
 .how-to-use-title {
@@ -661,15 +654,15 @@
 .how-to-use-link {
   display: block;
   width: 155px;
-  padding: 12px 16px;
-  text-align: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
   color: #ffffff;
+  padding: 12px 16px;
   background-color: #fcc400;
   border: 1px solid #ffc700;
   border-radius: 20px 60px;
+  text-align: center;
 }
 
 .how-to-use-list {
@@ -683,10 +676,10 @@
 
 .how-to-use-wrap {
   display: flex;
-  gap: 13px;
+  gap: 12px;
 }
 
-.how-to-use-wrap-icon {
+.how-to-use-icon {
   width: 40px;
   height: 40px;
 }
@@ -701,8 +694,7 @@
 
 .how-to-use-age-box {
   display: flex;
-  align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   overflow-x: auto;
   overflow-y: hidden;
   gap: 10px;
@@ -710,19 +702,22 @@
 }
 
 .how-to-use-age-box-list {
-  flex-basis: calc((100% - 4 * 10px) / 5);
   min-width: 160px;
+  max-width: 208px;
   height: 129px;
   border-radius: 10px 10px 10px 10px;
   border: 1px solid #addbf9;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .how-to-use-age-box-item-first {
-  height: calc(129px / 2);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 19px;
+  flex-basis: 100%;
+  flex-grow: 1;
+  padding: 5px;
 }
 
 .how-to-use-age-box-item-first:first-child {
@@ -746,11 +741,12 @@
 }
 
 .how-to-use-age-box-item {
-  height: calc(129px / 2);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  flex-basis: 100%;
+  flex-grow: 1;
+  padding: 5px;
 }
 
 .how-to-use-age-box-item:first-child {
@@ -814,7 +810,7 @@
 /* Footer Section Style */
 
 .footer {
-  padding: 0 30px 80px;
+  padding: 0 0 80px;
 }
 
 .footer-item:not(:last-child) {
@@ -840,23 +836,15 @@
   background-color: rgba(244, 244, 244, 0.6);
   padding: 4px 4px;
   width: 100%;
+  background-color: rgba(244, 244, 244, 0.6);
 }
 
-@media screen and (max-width: 1023px) {
-  .contraindications-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .contraindications-item:not(:last-child) {
-    margin-bottom: -3px;
-  }
-
-  .contraindications-desk-wrap {
-    display: none;
-  }
+.contraindications-icon {
+  background-image: url(../img/svg/icon-contraindications.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 60px;
 }
 
 /* ----------MEDIA 768px Style---------- */
@@ -908,7 +896,7 @@
 
   /* pharmacy style */
 
-  .pharmacy-link-btn {
+  .pharmacy-link {
     padding: 10px 26px;
   }
 
@@ -951,7 +939,7 @@
   }
 
   .hero-legkolax_packs-img-pic {
-    bottom: 24px;
+    bottom: 10%;
     left: 63%;
     transform: translateX(-20%);
     width: 168px;
@@ -963,14 +951,10 @@
     padding-bottom: 96px;
   }
 
-  .about-cause-list {
-    margin-bottom: 60px;
-  }
-
   /* about features style */
 
   .about-features-background {
-    background-position: center left 108%;
+    background-position: bottom 5% left 95%;
   }
 
   .about-features-list {
@@ -1003,34 +987,31 @@
   .why-legkolaks-desk-wrap {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     row-gap: 20px;
-    column-gap: 32px;
-    margin-bottom: 80px;
+    column-gap: 25px;
+    margin-bottom: 20px;
   }
 
-  .why-legkolaks-background-wrap {
-    margin: 0;
-    padding-top: 28px;
-    padding-bottom: 38px;
-  }
-
-  .why-legkolaks-background-wrap,
-  .why-legkolaks-title-desk-wrap,
-  .why-legkolaks-box-desk-wrap,
-  .why-legkolaks-use-wrap {
-    width: 320px;
+  .why-legkolaks-desk-flex {
+    flex: 0 0 48%;
+    max-width: 48%;
   }
 
   .why-legkolaks-background {
-    padding: 0;
-    height: 100%;
-    width: 100%;
+    margin: 0 auto;
+    padding: 140px 0 140px;
   }
 
-  .why-legkolaks-img-wrap {
-    bottom: 38px;
-    width: 276px;
+  @media screen and (max-width: 772px) {
+    .why-legkolaks-background {
+      margin-bottom: 5%;
+    }
+  }
+
+  .why-legkolaks-img-pic {
+    bottom: 0;
+    width: 316px;
   }
 
   .why-legkolaks-content-list {
@@ -1039,22 +1020,11 @@
 
   .why-legkolaks-box-list {
     margin: 0;
-  }
-
-  .why-legkolaks-use-list {
-    margin-bottom: 0;
+    margin-top: 9px;
   }
 
   .why-legkolaks-use-link {
-    margin-bottom: 0;
-  }
-
-  .why-legkolaks-use-video {
-    background-size: contain;
-  }
-
-  .why-legkolaks-use-video-img {
-    width: 480px;
+    margin: 0;
   }
 
   .why-legkolaks-use-video-icon {
@@ -1068,53 +1038,35 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-    gap: 32px;
+    align-items: center;
+    gap: 30px;
     margin-bottom: 60px;
   }
 
-  .how-to-use-background-wrap {
-    position: relative;
-    min-width: 320px;
-    margin: 0;
-    padding: 68px 0 68px 24px;
-  }
-
-  .how-to-use-title-desk-wrap {
-    width: 320px;
-  }
-
   .how-to-use-background {
-    padding: 0;
-    width: 100%;
-    height: 100%;
+    padding: 150px 0 150px;
   }
 
-  .how-to-use-bubble-medium {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translateX(-115%);
-    height: 90px;
-    width: 90px;
-    border-radius: 50%;
-    background-image: linear-gradient(244.57deg, #11e4fc 17.29%, #25bbfe 55.89%);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-    z-index: 1;
+  .how-to-use-desk-flex {
+    flex: 0 0 48%;
+    max-width: 48%;
   }
 
-  .how-to-use-img-woman-wrap {
-    position: absolute;
-    bottom: 67px;
-    left: 58%;
-    transform: translateX(-50%);
-    z-index: 2;
-    width: 232px;
+  .how-to-use-background-wrap {
+    margin: 0;
+    max-width: 346px;
   }
 
-  .how-to-use-img-pack-wrap {
-    bottom: 30px;
-    left: 0;
-    width: 170px;
+  .how-to-use-img-woman-pic {
+    bottom: 7%;
+    left: 60%;
+    transform: translateX(-60%);
+    width: 268px;
+  }
+
+  .how-to-use-img-pack-pic {
+    bottom: -10px;
+    width: 186px;
   }
 
   .how-to-use-list {
@@ -1124,11 +1076,11 @@
   /* Footer Section Style */
 
   .footer {
-    padding-bottom: 96px;
+    padding-bottom: 88px;
   }
 
-  .contraindications-icon-mob {
-    width: 420px;
+  .contraindications-icon {
+    height: 70px;
   }
 }
 
@@ -1151,8 +1103,8 @@
   /* logo style */
 
   .logo-icon {
-    width: 120px;
-    height: 24px;
+    width: 128px;
+    height: 26px;
   }
 
   /* navigation style */
@@ -1171,17 +1123,16 @@
   }
 
   /* pharmacy style */
-  .pharmacy-link-btn {
-    margin-left: auto;
-    margin-right: 40px;
-    padding: 10px 24px;
-    border: 1px solid #ffc700;
-    border-radius: 20px 60px;
-  }
 
   .pharmacy-link {
+    margin-left: auto;
+    margin-right: 40px;
+    border: 1px solid #ffc700;
+    border-radius: 20px 60px;
+    width: 170px;
     color: #ffffff;
     font-size: 16px;
+    padding: 10px 24px;
   }
 
   .pharmacy-text-mob,
@@ -1216,25 +1167,25 @@
   }
 
   .hero-background {
-    padding: 160px 0 160px;
+    padding: 180px 0 180px;
     max-width: var(--tab-hero-background-wrap);
   }
 
   .hero-title {
-    font-size: 42px;
+    font-size: 48px;
   }
 
   .hero-subtitle {
-    font-size: 17px;
+    font-size: 20px;
+    margin-left: -10px;
   }
 
   .hero-woman-img-pic {
-    width: 300px;
+    width: 340px;
   }
 
   .hero-legkolax_packs-img-pic {
-    bottom: 30px;
-    width: 186px;
+    width: 204px;
   }
 
   /* ABOUT Section Style */
@@ -1244,21 +1195,11 @@
     position: relative;
   }
 
-  .about-bubble-medium {
-    position: absolute;
-    top: -45px;
-    right: 20px;
-    width: 48px;
-    height: 48px;
-    background-image: linear-gradient(180deg, #5beeff 0%, #25bbfe 100%);
-    border-radius: 50%;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-  }
-
   .about-desk-wrap {
     display: flex;
-    gap: 30px;
-    margin-bottom: 70px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
   }
 
   .about-text-list {
@@ -1274,29 +1215,28 @@
     margin-bottom: 0;
   }
 
-  .about-img-wrap {
-    width: 100%;
+  .about-img-pic {
+    width: 148px;
   }
 
   /* about features style */
 
   .about-features-background {
     background-image: url(../img/svg/icon-thread-desk.svg);
-    background-position: top center;
-    background-size: contain;
+    background-position: bottom 5% left 95%;
     position: relative;
   }
 
   .about-features-bubble-small {
     position: absolute;
-    top: -10px;
-    left: 44px;
+    top: 25%;
+    left: 4%;
+    transform: translate(-25%, -4%) rotate(-85.76deg);
     width: 32px;
     height: 32px;
     background-image: linear-gradient(244.57deg, #11e4fc 17.29%, #25bbfe 55.89%);
     border-radius: 50%;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-    transform: rotate(-85.76deg);
   }
 
   .about-features-list {
@@ -1347,29 +1287,32 @@
   }
 
   .why-legkolaks-desk-wrap {
-    column-gap: 40px;
-    row-gap: 25px;
+    row-gap: 24px;
+    margin-bottom: 40px;
   }
 
-  .why-legkolaks-background-wrap {
-    padding-top: 24px;
-    padding-bottom: 0;
-    min-width: 415px;
+  .why-legkolaks-background {
+    margin: 0;
+    margin-bottom: -5%;
+    padding: 155px 0 155px;
   }
 
-  .why-legkolaks-img-wrap {
-    bottom: 0;
-    width: 266px;
+  .why-legkolaks-title-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 
-  .why-legkolaks-box-desk-wrap,
-  .why-legkolaks-title-desk-wrap,
-  .why-legkolaks-use-wrap {
-    width: 415px;
+  .why-legkolaks-box-wrap {
+    margin-top: 6%;
+  }
+
+  .why-legkolaks-img-pic {
+    width: 346px;
   }
 
   .why-legkolaks-use-video-img {
-    width: 640px;
+    max-width: 834px;
   }
 
   .why-legkolaks-use-video-icon {
@@ -1383,29 +1326,32 @@
     padding-bottom: 65px;
   }
 
+  .how-to-use-container {
+    padding: 0 72px;
+  }
+
   .how-to-use-desk-wrap {
-    margin-bottom: 75px;
+    margin-bottom: 85px;
     gap: 40px;
   }
 
-  .how-to-use-title-desk-wrap {
-    width: 415px;
-  }
-
   .how-to-use-background-wrap {
-    min-width: 415px;
     padding: 25px 0 0 24px;
+    max-width: 48%;
   }
 
-  .how-to-use-img-woman-wrap {
+  .how-to-use-background {
+    padding: 175px 0 175px;
+  }
+
+  .how-to-use-img-woman-pic {
     bottom: -1px;
-    left: 53%;
-    width: 292px;
+    width: 314px;
   }
 
-  .how-to-use-img-pack-wrap {
-    bottom: -40px;
-    width: 218px;
+  .how-to-use-img-pack-pic {
+    bottom: -48px;
+    width: 230px;
   }
 
   .how-to-use-age-box {
@@ -1415,25 +1361,15 @@
   /* Footer Section Style */
 
   .footer {
-    padding-bottom: 96px;
-  }
-
-  .contraindications-list {
-    display: none;
+    padding-bottom: 80px;
   }
 
   .contraindications {
-    padding: 16px 13px;
-  }
-
-  .contraindications-desk-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 6px 12px;
   }
 
   .contraindications-icon {
-    width: 1000px;
+    background-image: url(../img/svg/icon-contraindications-desk.svg);
   }
 }
 
@@ -1473,14 +1409,12 @@
 
   /* pharmacy style */
 
-  .pharmacy-link-btn {
-    margin-right: 79px;
-    padding: 12px 28px;
-  }
-
   .pharmacy-link {
+    margin-right: 79px;
+    width: 189px;
     font-size: 18px;
     line-height: 1.44;
+    padding: 12px 28px;
   }
 
   /* language box style */
@@ -1492,8 +1426,8 @@
   /* HERO Section Style */
 
   .hero {
-    padding-top: 62px;
-    padding-bottom: 100px;
+    padding-top: 92px;
+    padding-bottom: 99px;
   }
 
   .hero-background {
@@ -1505,17 +1439,18 @@
   }
 
   .hero-title-wrap {
-    top: 20%;
     left: 52%;
   }
 
   .hero-title {
     font-size: 70px;
-    line-height: 1;
+    line-height: 1.26;
   }
 
   .hero-subtitle {
-    font-size: 27px;
+    font-size: 28px;
+    line-height: 1.5;
+    margin-left: -25px;
   }
 
   .hero-woman-img-pic {
@@ -1524,8 +1459,7 @@
   }
 
   .hero-legkolax_packs-img-pic {
-    bottom: 60px;
-    left: 672px;
+    left: 77%;
     width: 100%;
   }
 
@@ -1536,17 +1470,19 @@
   }
 
   .about-bubble-medium {
-    top: -50px;
-    right: 50px;
+    position: absolute;
+    top: -5%;
+    right: 3%;
+    transform: translate(5%, -3%);
     width: 76px;
     height: 76px;
+    background-image: linear-gradient(180deg, #5beeff 0%, #25bbfe 100%);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
   }
 
   .about-desk-wrap {
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
   }
 
   .about-title-wrap {
@@ -1566,7 +1502,7 @@
     gap: 25px;
   }
 
-  .about-img-wrap {
+  .about-img-pic {
     width: 260px;
   }
 
@@ -1581,13 +1517,13 @@
   }
 
   .about-features-background {
-    background-position: top center;
-    background-size: 105% 80%;
+    background-position: bottom 63% left 38%;
   }
 
   .about-features-bubble-small {
-    top: -10px;
-    left: -30px;
+    top: 12%;
+    left: 4%;
+    transform: translate(-12%, -4%) rotate(-85.76deg);
     width: 54px;
     height: 54px;
   }
@@ -1633,20 +1569,8 @@
   }
 
   .why-legkolaks-desk-wrap {
-    column-gap: 102px;
     row-gap: 32px;
     margin-bottom: 100px;
-  }
-
-  .why-legkolaks-background-wrap {
-    min-width: 543px;
-    padding-top: 44px;
-  }
-
-  .why-legkolaks-box-desk-wrap,
-  .why-legkolaks-title-desk-wrap,
-  .why-legkolaks-use-wrap {
-    width: 543px;
   }
 
   .why-legkolaks-background {
@@ -1654,16 +1578,19 @@
     border-radius: 20px;
     border-top-right-radius: 100px;
     border-bottom-left-radius: 100px;
+    margin-bottom: -7%;
   }
 
-  .why-legkolaks-img-wrap {
+  .why-legkolaks-img-pic {
     width: 392px;
   }
 
-  .why-legkolaks-title-desk-wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+  .why-legkolaks-title {
+    margin-bottom: 32px;
+  }
+
+  .why-legkolaks-content-item:not(:last-child) {
+    margin-bottom: 16px;
   }
 
   .why-legkolaks-text,
@@ -1671,6 +1598,10 @@
   .why-legkolaks-box-text {
     font-size: 17px;
     line-height: 1.47;
+  }
+
+  .why-legkolaks-box-wrap {
+    margin-top: 8%;
   }
 
   .why-legkolaks-box-list {
@@ -1682,32 +1613,44 @@
     line-height: 1;
   }
 
+  .why-legkolaks-box-pic {
+    margin-right: 22px;
+  }
+
   .why-legkolaks-box-icon,
   .why-legkolaks-use-icon {
     width: 50px;
     height: 50px;
   }
 
+  .why-legkolaks-box-icon {
+    margin-right: 22px;
+  }
+
+  .why-legkolaks-use-list {
+    margin-bottom: 32px;
+  }
+
+  .why-legkolaks-use-item {
+    gap: 20px;
+  }
+
   .why-legkolaks-use-item:not(:last-child) {
     margin-bottom: 20px;
   }
 
-  .why-legkolaks-use-wrap {
-    gap: 19px;
+  .why-legkolaks-use-link {
+    width: 218px;
   }
 
   .why-legkolaks-use-link {
     font-size: 18px;
     line-height: 1.44;
-    width: 218px;
     padding: 12px 37px;
-    margin: 0;
-    margin-top: 32px;
-    margin-right: auto;
   }
 
-  .why-legkolaks-use-video-img {
-    width: 834px;
+  .why-legkolaks-use-video {
+    background-position: center right;
   }
 
   .why-legkolaks-use-video-icon {
@@ -1717,26 +1660,26 @@
 
   .why-legkolaks-use-video-bubble-small {
     position: absolute;
-    bottom: 0;
-    left: -50px;
+    bottom: -5%;
+    left: 5%;
+    transform: translate(5%, -5%) rotate(-90deg);
     width: 74px;
     height: 74px;
     background-image: linear-gradient(244.57deg, #11e4fc 17.29%, #25bbfe 55.89%);
     border-radius: 50%;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-    transform: rotate(-90deg);
   }
 
   .why-legkolaks-use-video-bubble-medium {
     position: absolute;
-    top: -50px;
-    right: -50px;
+    top: 0;
+    right: 5%;
+    transform: translateX(-5%) rotate(-90deg);
     width: 122px;
     height: 122px;
     background-image: linear-gradient(244.57deg, #11e4fc 17.29%, #25bbfe 55.89%);
     border-radius: 50%;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-    transform: rotate(-90deg);
   }
 
   /* HOW TO USE Section Style */
@@ -1747,12 +1690,17 @@
 
   .how-to-use-desk-wrap {
     margin-bottom: 95px;
-    gap: 137px;
+    justify-content: space-between;
+  }
+
+  .how-to-use-desk-flex {
+    flex: 0 0 46%;
+    max-width: 46%;
   }
 
   .how-to-use-background-wrap {
-    min-width: 485px;
     padding: 34px 0 0 24px;
+    max-width: 485px;
   }
 
   .how-to-use-background {
@@ -1762,27 +1710,15 @@
     padding: 205px 0 206px;
   }
 
-  .how-to-use-bubble-medium {
-    width: 124px;
-    height: 124px;
-    top: 35%;
-    left: 40%;
-    transform: translateX(-100%);
+  .how-to-use-img-woman-pic {
+    left: 55%;
+    transform: translateX(-55%);
+    width: 371px;
   }
 
-  .how-to-use-img-woman-wrap {
-    bottom: -2px;
-    left: 53%;
-    width: 351px;
-  }
-
-  .how-to-use-img-pack-wrap {
-    bottom: -50px;
-    width: 254px;
-  }
-
-  .how-to-use-title-desk-wrap {
-    width: 485px;
+  .how-to-use-img-pack-pic {
+    bottom: -55px;
+    width: 255px;
   }
 
   .how-to-use-title {
@@ -1796,6 +1732,7 @@
   }
 
   .how-to-use-subtitle {
+    max-width: 203px;
     margin: 0;
     font-size: 20px;
     line-height: 1.4;
@@ -1803,6 +1740,9 @@
 
   .how-to-use-link {
     width: 218px;
+  }
+
+  .how-to-use-link {
     padding: 12px 37px;
     font-size: 18px;
     line-height: 1.44;
@@ -1820,9 +1760,9 @@
     gap: 15px;
   }
 
-  .how-to-use-wrap-icon {
-    width: 52px;
-    height: 52px;
+  .how-to-use-icon {
+    width: 55px;
+    height: 55px;
   }
 
   .how-to-use-text {
@@ -1851,11 +1791,7 @@
 
   /* Footer Section Style */
 
-  .footer {
-    padding: 0 120px 96px;
-  }
-
-  .contraindications-icon {
-    width: 1400px;
+  .contraindications {
+    padding: 12px 16px;
   }
 }
