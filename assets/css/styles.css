@@ -190,12 +190,13 @@
 }
 
 .header-mob-menu-btn:after {
+  left: 0;
   bottom: 0;
-  right: 0;
 }
 
 .show-cross.header-mob-menu-btn:after {
-  transform: rotate(135deg) translate(-30%, 70%);
+  top: 40%;
+  transform: rotate(-45deg) translate(0, 40%);
 }
 
 .show-cross .header-mob-menu-line {
@@ -203,7 +204,9 @@
 }
 
 .show-cross.header-mob-menu-btn:before {
-  transform: rotate(-135deg) translate(-30%, -70%);
+  top: 45%;
+  bottom: auto;
+  transform: rotate(45deg) translate(0, -45%);
 }
 
 /* Add class on button click "show-cross" */
@@ -312,7 +315,7 @@
 /* ABOUT Section Style */
 
 .about {
-  padding-bottom: 72px;
+  padding-bottom: 112px;
 }
 
 @media screen and (max-width: 1439px) {
@@ -343,6 +346,7 @@
   display: flex;
   justify-content: center;
   gap: 20px;
+  margin-bottom: 64px;
 }
 
 .about-img-pic {
@@ -367,34 +371,34 @@
 /* about features style */
 
 .about-features-background {
-  padding: 40px 0 40px;
-  background-image: url(../img/svg/icon-thread-mob.svg);
+  background-image: url(../img/svg/icon-thread-desk.svg);
   background-repeat: no-repeat;
-  background-position: bottom 5% left 79%;
-}
-
-@media screen and (max-width: 1023px) {
-  .about-features-bubble-small {
-    display: none;
-  }
+  background-position: top 20% left 78%;
 }
 
 .about-features-list {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  gap: 16px;
-  margin-left: 12px;
-  margin-right: 12px;
+  gap: 10%;
+}
+
+.about-features-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
 }
 
 .about-features-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
   color: var(--subtitle-color);
+}
+
+@media screen and (max-width: 767px) {
+  .about-features-link {
+    width: 70px;
+  }
 }
 
 .about-features-img {
@@ -421,7 +425,6 @@
   justify-content: center;
   align-items: center;
   gap: 4px;
-  flex-basis: calc((100% - 4px) / 2);
 }
 
 .about-features-title {
@@ -435,6 +438,32 @@
 @media screen and (max-width: 1023px) {
   .about-features-text {
     display: none;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .about-features-background {
+    background-position: top 20% left 81%;
+  }
+
+  .about-features-item {
+    width: 85px;
+  }
+
+  .about-features-img {
+    width: 62px;
+    height: 62px;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .about-features-background {
+    background-position: top 20% left 84%;
+  }
+
+  .about-features-img {
+    width: 68px;
+    height: 68px;
   }
 }
 
@@ -587,6 +616,13 @@
   padding: 28px 0 28px;
 }
 
+@media screen and (min-width: 480px) {
+  .why-legkolaks-use-video {
+    background-position: center;
+    background-size: contain;
+  }
+}
+
 .why-legkolaks-use-video-img {
   padding: 0 24px;
   margin: 0 auto;
@@ -598,6 +634,7 @@
   left: 50%;
   z-index: 1;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 
 /* HOW TO USE Section Style */
@@ -694,30 +731,35 @@
 
 .how-to-use-age-box {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   overflow-x: auto;
-  overflow-y: hidden;
   gap: 10px;
   padding-bottom: 17px;
 }
 
 .how-to-use-age-box-list {
   min-width: 160px;
-  max-width: 208px;
-  height: 129px;
+  max-width: 180px;
+  height: 100%;
   border-radius: 10px 10px 10px 10px;
   border: 1px solid #addbf9;
   display: flex;
   flex-wrap: wrap;
 }
 
-.how-to-use-age-box-item-first {
+.how-to-use-age-box-item-first,
+.how-to-use-age-box-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-basis: 100%;
   flex-grow: 1;
-  padding: 5px;
+  height: calc(129px / 2);
+  flex-basis: 100%;
+  padding: 10px 10px;
+}
+
+.how-to-use-age-box-item:first-child {
+  border-bottom: 1px solid #addbf9;
 }
 
 .how-to-use-age-box-item-first:first-child {
@@ -738,19 +780,6 @@
   line-height: 1.5;
   text-transform: uppercase;
   color: #ffffff;
-}
-
-.how-to-use-age-box-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-basis: 100%;
-  flex-grow: 1;
-  padding: 5px;
-}
-
-.how-to-use-age-box-item:first-child {
-  border-bottom: 1px solid #addbf9;
 }
 
 .how-to-use-age-box-text {
@@ -922,7 +951,7 @@
   }
 
   .hero-background {
-    max-width: var(--mob768-hero-background-wrap);
+    max-width: 1200px;
   }
 
   .hero-title-wrap {
@@ -940,8 +969,8 @@
 
   .hero-legkolax_packs-img-pic {
     bottom: 10%;
-    left: 63%;
-    transform: translateX(-20%);
+    left: 60%;
+    transform: translateX(-10%);
     width: 168px;
   }
 
@@ -951,19 +980,30 @@
     padding-bottom: 96px;
   }
 
+  .about-desk-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 0;
+  }
+
+  .about-cause-list {
+    align-items: center;
+    margin-bottom: 0;
+  }
+
   /* about features style */
 
   .about-features-background {
-    background-position: bottom 5% left 95%;
-  }
-
-  .about-features-list {
-    gap: 30px;
+    background-position: top 50% center;
+    background-size: 135% auto;
+    padding-top: 64px;
   }
 
   .about-features-img {
-    width: 65px;
-    height: 65px;
+    width: 72px;
+    height: 72px;
   }
 
   .about-features-woman-icon {
@@ -975,11 +1015,13 @@
   }
 
   .about-features-pregnant-icon {
-    width: 25px;
+    width: 24px;
   }
 
-  .about-features-arrow-icon {
-    width: 7px;
+  @media screen and (max-width: 1023px) {
+    .about-features-link {
+      width: 76px;
+    }
   }
 
   /* WHY LEGKOLAKS Section Style */
@@ -1021,6 +1063,11 @@
   .why-legkolaks-box-list {
     margin: 0;
     margin-top: 9px;
+  }
+
+  .why-legkolaks-use-video {
+    background-position: top 60% left 75%;
+    background-size: auto;
   }
 
   .why-legkolaks-use-link {
@@ -1168,7 +1215,6 @@
 
   .hero-background {
     padding: 180px 0 180px;
-    max-width: var(--tab-hero-background-wrap);
   }
 
   .hero-title {
@@ -1191,7 +1237,7 @@
   /* ABOUT Section Style */
 
   .about {
-    padding-bottom: 112px;
+    padding-bottom: 100px;
     position: relative;
   }
 
@@ -1199,7 +1245,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 0;
   }
 
   .about-text-list {
@@ -1211,10 +1257,6 @@
     margin-bottom: 0;
   }
 
-  .about-cause-list {
-    margin-bottom: 0;
-  }
-
   .about-img-pic {
     width: 148px;
   }
@@ -1222,42 +1264,30 @@
   /* about features style */
 
   .about-features-background {
-    background-image: url(../img/svg/icon-thread-desk.svg);
-    background-position: bottom 5% left 95%;
-    position: relative;
+    background-position: top 50% center;
+    background-size: 135% auto;
+    padding-top: 70px;
   }
 
-  .about-features-bubble-small {
-    position: absolute;
-    top: 25%;
-    left: 4%;
-    transform: translate(-25%, -4%) rotate(-85.76deg);
-    width: 32px;
-    height: 32px;
-    background-image: linear-gradient(244.57deg, #11e4fc 17.29%, #25bbfe 55.89%);
-    border-radius: 50%;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .about-features-list {
-    gap: 70px;
+  .about-features-item {
+    width: 100px;
   }
 
   .about-features-img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
   }
 
   .about-features-woman-icon {
-    width: 38px;
+    width: 49px;
   }
 
   .about-features-girl-icon {
-    width: 34px;
+    width: 44px;
   }
 
   .about-features-pregnant-icon {
-    width: 30px;
+    width: 37px;
   }
 
   .about-features-content {
@@ -1358,6 +1388,16 @@
     padding-bottom: 0;
   }
 
+  .how-to-use-age-box-list {
+    max-width: 190px;
+  }
+
+  @media screen and (min-width: 1160px) {
+    .how-to-use-age-box-list {
+      max-width: 200px;
+    }
+  }
+
   /* Footer Section Style */
 
   .footer {
@@ -1370,6 +1410,46 @@
 
   .contraindications-icon {
     background-image: url(../img/svg/icon-contraindications-desk.svg);
+  }
+}
+
+/* ----------MEDIA 1200px Style---------- */
+
+/* ABOUT Section Style */
+
+@media screen and (min-width: 1200px) {
+  .about {
+    padding-bottom: 119px;
+  }
+
+  .about-features-background {
+    background-position: top 65% center;
+    padding-top: 84px;
+  }
+
+  .about-features-item {
+    width: 159px;
+  }
+
+  .about-features-img {
+    width: 118px;
+    height: 118px;
+  }
+
+  .about-features-woman-icon {
+    width: 58px;
+  }
+
+  .about-features-girl-icon {
+    width: 53px;
+  }
+
+  .about-features-pregnant-icon {
+    width: 43px;
+  }
+
+  .about-features-title {
+    font-size: 14px;
   }
 }
 
@@ -1435,7 +1515,6 @@
     border-radius: 30px;
     border-top-right-radius: 150px;
     border-bottom-left-radius: 150px;
-    max-width: 100%;
   }
 
   .hero-title-wrap {
@@ -1481,10 +1560,6 @@
     border-radius: 50%;
   }
 
-  .about-desk-wrap {
-    margin-bottom: 60px;
-  }
-
   .about-title-wrap {
     max-width: 543px;
   }
@@ -1498,7 +1573,6 @@
   }
 
   .about-cause-list {
-    align-items: center;
     gap: 25px;
   }
 
@@ -1517,22 +1591,17 @@
   }
 
   .about-features-background {
-    background-position: bottom 63% left 38%;
-  }
-
-  .about-features-bubble-small {
-    top: 12%;
-    left: 4%;
-    transform: translate(-12%, -4%) rotate(-85.76deg);
-    width: 54px;
-    height: 54px;
+    background-position: top 61% left 38%;
+    background-size: auto;
+    padding-top: 100px;
   }
 
   .about-features-list {
     gap: 107px;
   }
 
-  .about-features-link {
+  .about-features-item {
+    width: 191px;
     gap: 16px;
   }
 
@@ -1647,10 +1716,6 @@
     font-size: 18px;
     line-height: 1.44;
     padding: 12px 37px;
-  }
-
-  .why-legkolaks-use-video {
-    background-position: center right;
   }
 
   .why-legkolaks-use-video-icon {
@@ -1775,8 +1840,7 @@
   }
 
   .how-to-use-age-box-list {
-    flex-basis: calc((100% - 4 * 16px) / 5);
-    height: 100%;
+    max-width: 208px;
   }
 
   .how-to-use-age-box-text-first {
