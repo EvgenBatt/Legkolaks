@@ -643,9 +643,11 @@
   padding-bottom: 52px;
 }
 
-.how-to-use-background-wrap {
-  margin: 0 auto;
-  max-width: var(--mob-background-image);
+@media screen and (max-width: 767px) {
+  .how-to-use-background-wrap {
+    margin: 0 auto;
+    max-width: var(--mob-background-image);
+  }
 }
 
 .how-to-use-background {
