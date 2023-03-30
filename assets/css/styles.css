@@ -645,10 +645,7 @@
 
 .how-to-use-background-wrap {
   margin: 0 auto;
-  padding: 16px 0 25px 28px;
-  margin-bottom: 28px;
   max-width: var(--mob-background-image);
-  position: relative;
 }
 
 .how-to-use-background {
@@ -657,21 +654,23 @@
   border-top-right-radius: 80px;
   border-bottom-left-radius: 80px;
   padding: 111px 0 111px;
+  margin: 16px 0 53px 28px;
+  position: relative;
 }
 
 .how-to-use-img-woman-pic {
   position: absolute;
-  bottom: 9%;
+  bottom: -1px;
   left: 95%;
   transform: translateX(-95%);
   z-index: 2;
-  width: 234px;
+  width: 231px;
 }
 
 .how-to-use-img-pack-pic {
   position: absolute;
-  bottom: -5px;
-  left: 0;
+  bottom: -25px;
+  left: -28px;
   transform: translateX(0);
   z-index: 3;
   width: 151px;
@@ -1101,14 +1100,12 @@
 
   .how-to-use-background-wrap {
     margin: 0;
-    max-width: 346px;
   }
 
   .how-to-use-img-woman-pic {
-    bottom: 7%;
-    left: 60%;
+    left: 58%;
     transform: translateX(-60%);
-    width: 268px;
+    width: 270px;
   }
 
   .how-to-use-img-pack-pic {
