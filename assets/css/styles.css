@@ -1096,6 +1096,7 @@
   .how-to-use-desk-flex {
     flex: 0 0 48%;
     max-width: 48%;
+    flex-basis: 1;
   }
 
   .how-to-use-background-wrap {
@@ -1362,13 +1363,9 @@
     gap: 40px;
   }
 
-  .how-to-use-background-wrap {
-    padding: 25px 0 0 24px;
-    max-width: 48%;
-  }
-
   .how-to-use-background {
     padding: 175px 0 175px;
+    margin: 25px 0 0 24px;
   }
 
   .how-to-use-img-woman-pic {
@@ -1760,16 +1757,12 @@
     max-width: 46%;
   }
 
-  .how-to-use-background-wrap {
-    padding: 34px 0 0 24px;
-    max-width: 485px;
-  }
-
   .how-to-use-background {
     border-radius: 40px;
     border-top-right-radius: 120px;
     border-bottom-left-radius: 120px;
     padding: 205px 0 206px;
+    margin: 34px 0 0 24px;
   }
 
   .how-to-use-img-woman-pic {
