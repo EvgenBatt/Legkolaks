@@ -18,6 +18,14 @@
   --text-color: #333333;
   --icon-stroke: #0c67bd;
 
+  /* main transition */
+  --nav-link-tra: 300ms ease-in-out;
+  --btn-tra: 300ms linear;
+  --link-tra: 300ms ease-in-out;
+  --mob-menu-tra: 300ms ease-in-out;
+  --mob-menu-btn-tra: 300ms ease-in-out;
+  --scroll-to-top-btn-tra: 300ms ease-in-out;
+
   /* main background color */
 
   --body-bcg: #ffffff;

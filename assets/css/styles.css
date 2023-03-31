@@ -86,54 +86,83 @@
 
 /* navigation style */
 
+.backdrop {
+  display: none;
+  pointer-events: none;
+}
+
 @media screen and (max-width: 1023px) {
   .header-nav-mob {
     display: none;
-    transform: translateX(-100%);
-    transition: transform 300ms ease-in-out;
+    transition: var(--mob-menu-tra);
+    transform: translateY(-100%);
+  }
+
+  .backdrop.show {
+    display: block;
+    position: fixed;
+    z-index: 40;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    height: calc(100% - var(--header-height));
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   }
 
   .header-nav-mob.show-nav {
-    --header-height: 53px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding: 50px;
+    align-items: flex-start;
+    padding: 28px 29px;
     width: 100%;
-    height: calc(100vh - var(--header-height));
     position: fixed;
     z-index: 50;
     top: var(--header-height);
     right: 0;
+    height: calc(60vh - var(--header-height));
     overflow-y: auto;
     background-color: var(--body-bcg);
-    transform: translateX(0%);
-    transition: transform 300ms ease-in-out;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    transform: translateY(0%);
+    pointer-events: auto;
   }
 
   .header-nav-list {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 36px;
   }
 
   .header-nav-item:not(:last-child) {
-    margin-bottom: 35px;
+    margin-bottom: 24px;
   }
 }
 
 .header-nav-link {
+  font-family: "PF Square Sans Pro", sans-serif;
+  font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.18;
-  color: var(--title-color);
+  color: var(--subtitle-color);
+  transition: color var(--nav-link-tra);
+}
+
+.header-nav-link:is(:hover, :focus) {
+  color: #25bbfe;
+}
+
+.current {
+  color: #a3a3a3;
 }
 
 /* pharmacy style */
 
 .pharmacy-link {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -146,6 +175,12 @@
   background-color: #fcc400;
   border-radius: 60px;
   text-align: center;
+  transition: background-color var(--btn-tra), border-color var(--btn-tra);
+}
+
+.pharmacy-link:is(:hover, :focus) {
+  background-color: #40c4fe;
+  border-color: #40c4fe;
 }
 
 @media screen and (max-width: 309px) {
@@ -172,7 +207,7 @@
   border: none;
   margin-left: 16px;
   background-color: transparent;
-  transition: all 300ms ease-in-out;
+  transition: all var(--mob-menu-btn-tra);
   position: relative;
 }
 
@@ -185,7 +220,7 @@
   height: 3px;
   background-color: var(--header-mob-menu-bcg);
   border-radius: 3px;
-  transition: all 300ms ease-in-out;
+  transition: all var(--mob-menu-btn-tra);
 }
 
 .header-mob-menu-btn:before {
@@ -219,6 +254,12 @@
   transform: rotate(45deg) translate(0, -45%);
 }
 
+.show-cross.header-mob-menu-btn:after,
+.show-cross.header-mob-menu-btn:before {
+  width: 25px;
+  background-color: #c4c4c4;
+}
+
 /* Add class on button click "show-cross" */
 .header-mob-menu-btn:focus,
 .header-mob-menu-btn:active,
@@ -236,24 +277,50 @@
   .lang-mob-list {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 20px;
+  }
+
+  .lang-mob-item {
+    background-color: #b8e8ff;
+    border-radius: 5px 15px;
+    flex-basis: calc((100% - 20) / 2);
+    width: 39px;
+    height: 39px;
+  }
+
+  .lang-mob-list .lang-mob-item:nth-child(2) {
+    display: none;
+  }
+
+  .lang-pipeline {
+    display: none;
   }
 }
 
 .lang-ru,
 .lang-uz,
 .lang-pipeline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "PF Square Sans Pro", sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.18;
+  font-size: 13px;
+  line-height: 1.15;
   text-transform: uppercase;
-  color: #acacac;
-  transition: color 250ms linear;
+  color: #a3a3a3;
+  transition: color var(--link-tra);
+  width: 100%;
+  height: 100%;
 }
 
-.lang-ru:is(:hover, :focus, :active),
-.lang-uz:is(:hover, :focus, :active) {
+.lang-ru:is(:hover, :focus),
+.lang-uz:is(:hover, :focus) {
+  color: #40c4fe;
+}
+
+.lang-ru:is(:active),
+.lang-uz:is(:active) {
   color: #0c67bd;
 }
 
@@ -403,12 +470,17 @@
 
 .about-features-link {
   color: var(--subtitle-color);
+  transition: color var(--link-tra);
 }
 
 @media screen and (max-width: 767px) {
   .about-features-link {
     width: 70px;
   }
+}
+
+.about-features-link:is(:hover, :focus) {
+  color: #25bbfe;
 }
 
 .about-features-img {
@@ -443,6 +515,19 @@
   line-height: 1.38;
   text-align: center;
   text-transform: uppercase;
+}
+
+.about-features-arrow {
+  width: 9px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-features-arrow-icon {
+  display: inline-block;
+  fill: currentColor;
 }
 
 @media screen and (max-width: 1023px) {
@@ -604,9 +689,16 @@
   line-height: 1.18;
   color: #ffffff;
   background-color: #fcc400;
-  border: 1px solid #ffc700;
+  border: 2px solid #ffc700;
   border-radius: 20px 60px;
   text-align: center;
+  transition: color var(--btn-tra), border var(--btn-tra), background-color var(--btn-tra);
+}
+
+.why-legkolaks-use-link:is(:hover, :focus) {
+  color: #2468a6;
+  border: 2px solid #40c4fe;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 767px) {
@@ -642,6 +734,16 @@
   z-index: 1;
   transform: translate(-50%, -50%);
   cursor: pointer;
+}
+
+.why-legkolaks-use-video-icon {
+  background-color: #fcc400;
+  border-radius: 50%;
+  transition: background-color var(--btn-tra);
+}
+
+.why-legkolaks-use-video-icon:is(:hover, :focus) {
+  background-color: #40c4fe;
 }
 
 @media screen and (min-width: 420px) {
@@ -717,9 +819,16 @@
   color: #ffffff;
   padding: 12px 16px;
   background-color: #fcc400;
-  border: 1px solid #ffc700;
+  border: 2px solid #ffc700;
   border-radius: 20px 60px;
   text-align: center;
+  transition: color var(--btn-tra), border var(--btn-tra), background-color var(--btn-tra);
+}
+
+.how-to-use-link:is(:hover, :focus) {
+  color: #2468a6;
+  border: 2px solid #40c4fe;
+  background-color: transparent;
 }
 
 .how-to-use-list {
@@ -914,7 +1023,8 @@
   height: 40px;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out;
+  transition: opacity var(--scroll-to-top-btn-tra),
+    visibility var(--scroll-to-top-btn-tra);
 }
 
 #scrollToTopBtn.show {
@@ -946,12 +1056,23 @@
   /* navigation style */
 
   @media screen and (max-width: 1023px) {
+    .header-nav-mob.show-nav {
+      padding: 40px 50px;
+      height: calc(70vh - var(--header-height));
+      border-bottom-right-radius: 25px;
+      border-bottom-left-radius: 25px;
+    }
+
+    .header-nav-list {
+      margin-bottom: 54px;
+    }
+
     .header-nav-item:not(:last-child) {
-      margin-bottom: 45px;
+      margin-bottom: 32px;
     }
 
     .header-nav-link {
-      font-size: 25px;
+      font-size: 24px;
     }
   }
 
@@ -987,6 +1108,11 @@
   .header-mob-menu-btn:after,
   .header-mob-menu-line {
     height: 3px;
+  }
+
+  .show-cross.header-mob-menu-btn:after,
+  .show-cross.header-mob-menu-btn:before {
+    width: 32px;
   }
 
   /* HERO Section Style */
@@ -1248,6 +1374,8 @@
   .lang-uz,
   .lang-pipeline {
     font-size: 16px;
+    color: #acacac;
+    line-height: 1.18;
   }
 
   /* HERO Section Style */
@@ -1351,7 +1479,7 @@
   }
 
   .about-features-arrow-icon {
-    width: 5px;
+    width: 7px;
   }
 
   /* WHY LEGKOLAKS Section Style */
@@ -1547,6 +1675,7 @@
   .hero-woman-img-pic {
     width: 100%;
     left: 2%;
+    bottom: -1px;
     transform: translateX(-25%);
   }
 
