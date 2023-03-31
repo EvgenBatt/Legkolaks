@@ -119,7 +119,7 @@
     z-index: 50;
     top: var(--header-height);
     right: 0;
-    height: calc(60vh - var(--header-height));
+    height: calc(40vh - var(--header-height));
     overflow-y: auto;
     background-color: var(--body-bcg);
     border-bottom-right-radius: 15px;
@@ -1068,7 +1068,6 @@
   @media screen and (max-width: 1023px) {
     .header-nav-mob.show-nav {
       padding: 40px 50px;
-      height: calc(70vh - var(--header-height));
       border-bottom-right-radius: 25px;
       border-bottom-left-radius: 25px;
     }
