@@ -241,8 +241,8 @@
 }
 
 .show-cross.header-mob-menu-btn:after {
-  top: 45%;
-  transform: rotate(-45deg) translate(0, 45%);
+  top: 40%;
+  transform: rotate(-45deg) translate(0, 40%);
 }
 
 .show-cross .header-mob-menu-line {
@@ -252,12 +252,12 @@
 .show-cross.header-mob-menu-btn:before {
   top: 45%;
   bottom: auto;
-  transform: rotate(45deg) translate(0, -45%);
+  transform: rotate(45deg) translate(0, -40%);
 }
 
 .show-cross.header-mob-menu-btn:after,
 .show-cross.header-mob-menu-btn:before {
-  width: 25px;
+  width: 26px;
   background-color: #c4c4c4;
 }
 
