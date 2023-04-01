@@ -391,6 +391,38 @@
   width: 129px;
 }
 
+@media screen and (min-width: 460px) {
+  .hero-woman-img-pic {
+    left: 56%;
+  }
+
+  .hero-legkolax_packs-img-pic {
+    transform: translateX(-141%);
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .hero-legkolax_packs-img-pic {
+    transform: translateX(-145%);
+  }
+}
+
+@media screen and (min-width: 665px) {
+  .hero-woman-img-pic {
+    left: 54%;
+  }
+
+  .hero-legkolax_packs-img-pic {
+    transform: translateX(-158%);
+  }
+}
+
+@media screen and (min-width: 730px) {
+  .hero-legkolax_packs-img-pic {
+    transform: translateX(-162%);
+  }
+}
+
 /* ABOUT Section Style */
 
 .about {
