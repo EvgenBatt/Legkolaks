@@ -21,9 +21,7 @@ if (buttonMob && nav && backdrop) {
       document.body.classList.toggle("no-scroll", expanded);
 
       setTimeout(() => {
-        nav.style.transform = expanded
-          ? "translateY(0%)"
-          : "translateY(-100%)";
+        nav.style.transform = expanded ? "translateY(0%)" : "translateY(-100%)";
       }, 10);
     }
   });
@@ -39,5 +37,11 @@ if (buttonMob && nav && backdrop) {
         nav.style.transform = "translateY(-100%)";
       }, 10);
     }
+  });
+
+  backdrop.querySelectorAll("*").forEach((el) => {
+    el.addEventListener("click", (event) => {
+      event.stopPropagation();
+    });
   });
 }

@@ -252,7 +252,7 @@
 .show-cross.header-mob-menu-btn:before {
   top: 45%;
   bottom: auto;
-  transform: rotate(45deg) translate(0, -40%);
+  transform: rotate(45deg) translate(0, -45%);
 }
 
 .show-cross.header-mob-menu-btn:after,
