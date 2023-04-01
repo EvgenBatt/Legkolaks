@@ -38,10 +38,4 @@ if (buttonMob && nav && backdrop) {
       }, 10);
     }
   });
-
-  backdrop.querySelectorAll("*").forEach((el) => {
-    el.addEventListener("click", (event) => {
-      event.stopPropagation();
-    });
-  });
 }
