@@ -92,38 +92,60 @@
               <p class="hero-subtitle">легкое решение при запоре</p>
             </div>
             <div class="hero-woman-img-pic">
-              <img
-                class="img"
-                src="./assets/img/index/index-hero-woman-desk-1x.png"
-                alt="Woman says: I am ok"
-                width="485"
-                srcset="
-                  ./assets/img/index/index-hero-woman-mob-1x.png   225w,
-                  ./assets/img/index/index-hero-woman-mob-15x.png  336w,
-                  ./assets/img/index/index-hero-woman-mob-2x.png   450w,
-                  ./assets/img/index/index-hero-woman-desk-1x.png  485w,
-                  ./assets/img/index/index-hero-woman-desk-15x.png 728w,
-                  ./assets/img/index/index-hero-woman-desk-2x.png  970w
-                "
-                sizes="(max-width: 767px) 225px, (min-width: 768px) 485px, 100vw"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./assets/img/index/index-hero-woman-mob-1x.png 225w,
+                    ./assets/img/index/index-hero-woman-mob-2x.png 336w,
+                    ./assets/img/index/index-hero-woman-mob-2x.png 450w
+                  "
+                  type="image/png"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./assets/img/index/index-hero-woman-desk-1x.png 485w,
+                    ./assets/img/index/index-hero-woman-desk-2x.png 728w,
+                    ./assets/img/index/index-hero-woman-desk-2x.png 970w
+                  "
+                  type="image/png"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  class="img"
+                  src="./assets/img/index/index-hero-woman-desk-1x.png"
+                  alt="Woman says: I am ok"
+                  width="485"
+                />
+              </picture>
             </div>
             <div class="hero-legkolax_packs-img-pic">
-              <img
-                class="img"
-                src="./assets/img/index/index-hero-legkolax-packs-desk-1x.png"
-                alt="Legkoglax packs"
-                width="288"
-                srcset="
-                  ./assets/img/index/index-hero-legkolax-packs-mob-1x.png   129w,
-                  ./assets/img/index/index-hero-legkolax-packs-mob-15x.png  193w,
-                  ./assets/img/index/index-hero-legkolax-packs-mob-2x.png   257w,
-                  ./assets/img/index/index-hero-legkolax-packs-desk-1x.png  288w,
-                  ./assets/img/index/index-hero-legkolax-packs-desk-15x.png 432w,
-                  ./assets/img/index/index-hero-legkolax-packs-desk-2x.png  575w
-                "
-                sizes="(max-width: 767px) 129px, (min-width: 768px) 288px, 100vw"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./assets/img/index/index-hero-legkolax-packs-mob-1x.png 129w,
+                    ./assets/img/index/index-hero-legkolax-packs-mob-1x.png 193w,
+                    ./assets/img/index/index-hero-legkolax-packs-mob-2x.png 257w
+                  "
+                  type="image/png"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./assets/img/index/index-hero-legkolax-packs-desk-1x.png 288w,
+                    ./assets/img/index/index-hero-legkolax-packs-desk-1x.png 432w,
+                    ./assets/img/index/index-hero-legkolax-packs-desk-2x.png 575w
+                  "
+                  type="image/png"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  class="img"
+                  src="./assets/img/index/index-hero-legkolax-packs-desk-1x.png"
+                  alt="Legkoglax packs"
+                  width="288"
+                />
+              </picture>
             </div>
           </div>
         </div>
@@ -274,21 +296,32 @@
         <div class="container">
           <div class="why-legkolaks-desk-wrap">
             <div class="why-legkolaks-img why-legkolaks-desk-flex">
-              <img
-                class="img"
-                src="./assets//img/index/index-why-legkolax-woman-desk-1x.png"
-                alt="Woman with water"
-                width="543"
-                srcset="
-                  ./assets//img/index/index-why-legkolax-woman-mob-1x.png    272w,
-                  ./assets//img/index/index-why-legkolax-woman-mob-15x.png   408w,
-                  ./assets/img/index/index-why-legkolax-woman-mob-2x.png     544w,
-                  ./assets/img/index/index-why-legkolax-woman-desk-1x.png    543w,
-                  ./assets//img/index/index-why-legkolax-woman-desk-15x.png  815w,
-                  ./assets/img/index/index-why-legkolax-woman-desk-2x.png   1086w
-                "
-                sizes="(max-width: 767px) 272px, (min-width: 768px) 543px, 100vw"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./assets//img/index/index-why-legkolax-woman-mob-1x.png 272w,
+                    ./assets//img/index/index-why-legkolax-woman-mob-1x.png 408w,
+                    ./assets/img/index/index-why-legkolax-woman-mob-2x.png  544w
+                  "
+                  type="image/png"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./assets/img/index/index-why-legkolax-woman-desk-1x.png  543w,
+                    ./assets/img/index/index-why-legkolax-woman-desk-1x.png  815w,
+                    ./assets/img/index/index-why-legkolax-woman-desk-2x.png 1086w
+                  "
+                  type="image/png"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  class="img"
+                  src="./assets//img/index/index-why-legkolax-woman-desk-1x.png"
+                  alt="Woman with water"
+                  width="543"
+                />
+              </picture>
             </div>
 
             <div class="why-legkolaks-title-wrap why-legkolaks-desk-flex">
@@ -400,21 +433,32 @@
         <div class="why-legkolaks-use-video">
           <div class="container">
             <div class="why-legkolaks-use-video-img">
-              <img
-                class="img"
-                src="./assets/img/index/index-video-desk-1x.jpg"
-                alt="People at the meeting"
-                width="834"
-                srcset="
-                  ./assets/img/index/index-video-mob-1x.jpg    261w,
-                  ./assets/img/index/index-video-mob-15x.jpg   392w,
-                  ./assets/img/index/index-video-mob-2x.jpg    522w,
-                  ./assets/img/index/index-video-desk-1x.jpg   834w,
-                  ./assets/img/index/index-video-desk-15x.jpg 1252w,
-                  ./assets/img/index/index-video-desk-2x.jpg  1668w
-                "
-                sizes="(max-width: 767px) 261px, (min-width: 768px) 834px, 100vw"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./assets/img/index/index-video-mob-1x.jpg 261w,
+                    ./assets/img/index/index-video-mob-1x.jpg 392w,
+                    ./assets/img/index/index-video-mob-2x.jpg 522w
+                  "
+                  type="image/jpeg"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./assets/img/index/index-video-desk-1x.jpg 834w, 
+                    ./assets/img/index/index-video-desk-1x.jpg 1252w,
+                    ./assets/img/index/index-video-desk-2x.jpg 1668w
+                  "
+                  type="image/jpeg"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  class="img"
+                  src="./assets/img/index/index-video-desk-1x.jpg"
+                  alt="People at the meeting"
+                  width="834"
+                />
+              </picture>
             </div>
           </div>
           <div class="why-legkolaks-use-video-icon-wrap">
@@ -436,38 +480,60 @@
           <div class="how-to-use-desk-wrap">
             <div class="how-to-use-woman-img-wrap how-to-use-desk-flex">
               <div class="how-to-use-woman-img">
-                <img
-                  class="img"
-                  src="./assets/img/index/index-how-to-use-happy-woman-desk-1x.png"
-                  alt="Happy woman with girl"
-                  width="485"
-                  srcset="
-                    ./assets/img/index/index-how-to-use-happy-woman-mob-1x.png   272w,
-                    ./assets/img/index/index-how-to-use-happy-woman-mob-15x.png  408w,
-                    ./assets/img/index/index-how-to-use-happy-woman-mob-2x.png   544w,
-                    ./assets/img/index/index-how-to-use-happy-woman-desk-1x.png  485w,
-                    ./assets/img/index/index-how-to-use-happy-woman-desk-15x.png 728w,
-                    ./assets/img/index/index-how-to-use-happy-woman-desk-2x.png  970w
-                  "
-                  sizes="(max-width: 767px) 272px, (min-width: 768px) 485px, 100vw"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./assets/img/index/index-how-to-use-happy-woman-mob-1x.png 272w, 
+                      ./assets/img/index/index-how-to-use-happy-woman-mob-1x.png 408w,
+                      ./assets/img/index/index-how-to-use-happy-woman-mob-2x.png 544w
+                    "
+                    type="image/png"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./assets/img/index/index-how-to-use-happy-woman-desk-1x.png 485w, 
+                      ./assets/img/index/index-how-to-use-happy-woman-desk-1x.png 728w,
+                      ./assets/img/index/index-how-to-use-happy-woman-desk-2x.png 970w
+                    "
+                    type="image/png"
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    class="img"
+                    src="./assets/img/index/index-how-to-use-happy-woman-desk-1x.png"
+                    alt="Happy woman with girl"
+                    width="485"
+                  />
+                </picture>
               </div>
               <div class="how-to-use-pack-img">
-                <img
-                  class="img"
-                  src="./assets/img/index/index-how-to-use-legkolax-packs-desk-1x.png"
-                  alt="Legkoglax packs"
-                  width="255"
-                  srcset="
-                    ./assets/img/index/index-how-to-use-legkolax-packs-mob-1x.png  151w,
-                    ./assets/img/index/index-how-to-use-legkolax-packs-mob-1x.png  227w,
-                    ./assets/img/index/index-how-to-use-legkolax-packs-mob-2x.png  302w,
-                    ./assets/img/index/index-how-to-use-legkolax-packs-desk-1x.png 255w,
-                    ./assets/img/index/index-how-to-use-legkolax-packs-desk-1x.png 382w,
-                    ./assets/img/index/index-how-to-use-legkolax-packs-desk-2x.png 509w
-                  "
-                  sizes="(max-width: 767px) 151px, (min-width: 768px) 255px, 100vw"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./assets/img/index/index-how-to-use-legkolax-packs-mob-1x.png 151w, 
+                      ./assets/img/index/index-how-to-use-legkolax-packs-mob-1x.png 227w,
+                      ./assets/img/index/index-how-to-use-legkolax-packs-mob-2x.png 302w
+                    "
+                    type="image/png"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./assets/img/index/index-how-to-use-legkolax-packs-desk-1x.png 255w, 
+                      ./assets/img/index/index-how-to-use-legkolax-packs-desk-1x.png 382w,
+                      ./assets/img/index/index-how-to-use-legkolax-packs-desk-2x.png 509w
+                    "
+                    type="image/png"
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    class="img"
+                    src="./assets/img/index/index-how-to-use-legkolax-packs-desk-1x.png"
+                    alt="Legkoglax packs"
+                    width="255"
+                  />
+                </picture>
               </div>
             </div>
             <div class="how-to-use-desk-flex">
