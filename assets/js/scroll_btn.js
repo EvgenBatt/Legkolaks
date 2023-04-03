@@ -1,7 +1,7 @@
 const scrollToTopBtn = document.querySelector("#scrollToTopBtn");
 
 window.addEventListener("scroll", () => {
-  if (window.pageYOffset >= window.innerHeight * 2) {
+  if (window.pageYOffset >= window.innerHeight) {
     scrollToTopBtn.classList.add("show");
   } else {
     scrollToTopBtn.classList.remove("show");
