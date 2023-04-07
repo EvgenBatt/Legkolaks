@@ -1,0 +1,921 @@
+/* Category Pages Containers */
+
+.category-hero-container {
+  min-width: 260px;
+  max-width: 1248px;
+  padding: 0px 24px;
+  margin: 0 auto;
+}
+
+.category-about-container {
+  min-width: 272px;
+  max-width: 1020px;
+  padding: 0px 24px;
+  margin: 0 auto;
+}
+
+.category-about-features-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.category-how-to-use-container {
+  min-width: 272px;
+  max-width: 1060px;
+  padding: 0px 24px;
+  margin: 0 auto;
+}
+
+/* BUTTONS Category Pages Styles */
+
+.category-yellow-btn-link,
+.category-white-btn-link,
+.category-pharmacy-btn-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 184px;
+  height: 43px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  border-radius: 20px 60px;
+}
+
+.category-white-btn-link {
+  color: #2468a6;
+  border: 1px solid #40c4fe;
+  background-color: transparent;
+}
+
+.category-pharmacy-btn-link {
+  color: #ffffff;
+  background-color: #fcc400;
+  border: 1px solid #ffc700;
+  border-radius: 20px 60px;
+  gap: 10px;
+}
+
+.category-pharmacy-btn-icon {
+  fill: currentColor;
+}
+
+.category-yellow-btn-link {
+  width: 155px;
+  background-color: #fcc400;
+  border: 1px solid #ffc700;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+  .category-yellow-btn-link,
+  .category-white-btn-link,
+  .category-pharmacy-btn-link {
+    margin: 0 auto;
+  }
+
+  .category-yellow-btn-link {
+    margin-bottom: 32px;
+  }
+
+  .category-white-btn-link {
+    margin-bottom: 16px;
+  }
+}
+
+/* Category HERO Section Styles */
+
+.category-hero {
+  padding-top: 31px;
+  padding-bottom: 31px;
+}
+
+.category-hero-background {
+  background-image: linear-gradient(180deg, #2687c6 28.65%, #11e4fc 100%);
+  height: 331px;
+  border-radius: 20px;
+  border-top-right-radius: 80px;
+  border-bottom-left-radius: 80px;
+  display: grid;
+  justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .category-hero-title-wrap {
+    max-width: 190px;
+    margin-top: 36px;
+    margin-bottom: 9px;
+  }
+
+  .category-hero-woman-legkolaks-pic {
+    width: 142px;
+    position: relative;
+    bottom: 73%;
+    left: 57%;
+    z-index: 2;
+  }
+}
+
+.category-hero-woman-pic {
+  width: 183px;
+  align-self: end;
+  justify-self: center;
+  position: relative;
+  z-index: 1;
+}
+
+.category-hero-bubble-small {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: -6%;
+}
+
+@media screen and (max-width: 767px) {
+  .category-hero-bubble-small {
+    background-image: linear-gradient(171.43deg, #5beeff 6.54%, #25bbfe 44.33%);
+    box-shadow: 0px 1.42412px 4.27237px rgba(0, 0, 0, 0.1);
+    transform: rotate(-39.67deg);
+  }
+
+  .category-hero-bubble-medium {
+    display: none;
+  }
+}
+
+.category-hero-bubble-large {
+  background-image: linear-gradient(171.43deg, #5beeff 6.54%, #25bbfe 44.33%);
+  box-shadow: 0px 1.42412px 4.27237px rgba(0, 0, 0, 0.1);
+  transform: rotate(-39.67deg);
+  height: 92px;
+  width: 92px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: -15%;
+  z-index: -1;
+}
+
+/* Category ABOUT Section Styles */
+
+.category-about-title {
+  margin-bottom: 20px;
+}
+
+.category-about-text {
+  margin-bottom: 32px;
+}
+
+.category-about-list {
+  margin-bottom: 28px;
+}
+
+.category-about-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* Category About Features styles */
+
+.category-about-features {
+  background-image: url(../img/adults/svg/icon-thread-mob.svg);
+  background-repeat: no-repeat;
+  background-position: top 67% left 78%;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.category-about-features-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10%;
+}
+
+.category-about-features-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.category-about-features-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  background-color: #ffffff;
+  border: 2px solid #0c67bd;
+  border-radius: 50%;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category-about-features-link {
+  color: var(--subtitle-color);
+  transition: color var(--link-tra);
+}
+
+.category-about-features-link {
+  width: 75px;
+}
+
+.category-about-features-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.category-about-features-title {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.38;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1023px) {
+  .category-about-features-text {
+    display: none;
+  }
+}
+
+.category-about-features-arrow {
+  width: 9px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-about-features-arrow-icon {
+  display: inline-block;
+  fill: currentColor;
+}
+
+@media screen and (max-width: 1439px) {
+  .category-about-features-bubble-small,
+  .category-about-features-bubble-medium {
+    display: none;
+  }
+}
+
+/* Category HOW TO USE Section Styles */
+
+.category-how-to-use {
+  padding-bottom: 78px;
+}
+
+.category-how-to-use-woman-pic {
+  position: relative;
+}
+
+.category-how-to-use-legkolaks-pic {
+  position: absolute;
+  z-index: 1;
+}
+
+@media screen and (max-width: 767px) {
+  .category-how-to-use-legkolaks-pic {
+    bottom: 0;
+    left: 55%;
+  }
+}
+
+.category-how-to-use-title {
+  margin-bottom: 12px;
+}
+
+@media screen and (max-width: 1023px) {
+  .category-how-to-use-subtitle {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .category-how-to-use-list {
+    margin-bottom: 78px;
+  }
+}
+
+.category-how-to-use-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.category-how-to-use-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.category-how-to-use-item-text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.56;
+  color: var(--text-color);
+}
+
+/* ----------MEDIA 428px Style---------- */
+
+@media screen and (min-width: 428px) {
+  .category-about-features {
+    background-position: top 62% left 82%;
+  }
+
+  .category-about-features-list {
+    gap: 12%;
+  }
+
+  .category-about-features-img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .category-about-features-icon-girl {
+    width: 28px;
+  }
+
+  .category-about-features-icon-pregnant {
+    width: 24px;
+  }
+}
+
+/* ----------MEDIA 520px Style---------- */
+
+@media screen and (min-width: 520px) {
+  /* Category Pages Containers */
+
+  .header-container {
+    max-width: 520px;
+  }
+
+  .category-hero-container {
+    max-width: 520px;
+  }
+
+  .category-about-container {
+    max-width: 520px;
+  }
+
+  .category-how-to-use-container {
+    max-width: 520px;
+  }
+}
+
+/* ----------MEDIA 768px Style---------- */
+
+@media screen and (min-width: 768px) {
+  /* Category Pages Containers */
+
+  .header-container {
+    max-width: 900px;
+  }
+
+  .category-hero-container {
+    max-width: 900px;
+  }
+
+  .category-about-container {
+    max-width: 900px;
+  }
+
+  .category-how-to-use-container {
+    max-width: 900px;
+  }
+
+  /* Category HERO Section Styles */
+
+  .category-hero-background {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .category-hero-title-wrap {
+    max-width: 290px;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: start;
+    align-self: center;
+    margin-left: 20px;
+  }
+
+  .category-hero-woman-pic {
+    width: 298px;
+    align-self: end;
+    justify-self: end;
+    grid-row: 1 / 3;
+    grid-column: 1;
+    position: relative;
+    z-index: 1;
+  }
+
+  .category-hero-woman-legkolaks-pic {
+    width: 232px;
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: start;
+    margin-left: 20px;
+  }
+
+  .category-hero-bubble-small {
+    background-image: linear-gradient(180deg, #5beeff 0%, #25bbfe 100%);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    height: 43px;
+    width: 43px;
+    top: 9%;
+    right: 7%;
+  }
+
+  .category-hero-bubble-medium {
+    background-image: linear-gradient(244.57deg, #11e4fc 17.29%, #25bbfe 55.89%);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    position: absolute;
+    top: 13%;
+    left: -1%;
+  }
+
+  .category-hero-bubble-large {
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    height: 110px;
+    width: 110px;
+    top: 47%;
+  }
+
+  /* Category ABOUT Section Styles */
+
+  .category-about-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .category-about-item-flex {
+    flex: 0 0 50%;
+  }
+
+  .category-about-btn-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .category-about-features {
+    background-position: top 63% left 86%;
+    background-size: 300% 50%;
+  }
+
+  .category-about-features-list {
+    gap: 15%;
+  }
+
+  .category-about-features-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .category-about-features-icon-girl {
+    width: 34px;
+  }
+
+  .category-about-features-icon-pregnant {
+    width: 29px;
+  }
+
+  .category-about-features-link {
+    width: 85px;
+  }
+
+  /* Category HOW TO USE Section Styles */
+
+  .category-how-to-use-flex {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+  .category-how-to-use-flex-item {
+    flex: 0 0 50%;
+  }
+
+  .category-how-to-use-woman-pic {
+    max-width: 405px;
+  }
+
+  .category-how-to-use-legkolaks-pic {
+    bottom: 0;
+    left: 0;
+    width: 46%;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .category-how-to-use-list {
+      margin-top: 20px;
+    }
+  }
+}
+
+/* ----------MEDIA 1024px Style---------- */
+
+@media screen and (min-width: 1024px) {
+  /* Category Pages Containers */
+
+  .header-container {
+    max-width: 1248px;
+  }
+
+  .category-hero-container {
+    max-width: 1248px;
+  }
+
+  .category-about-container {
+    max-width: 1068px;
+  }
+
+  .category-how-to-use-container {
+    max-width: 1108px;
+  }
+
+  /* BUTTONS Category Pages Styles */
+
+  .category-white-btn-link {
+    width: 172px;
+  }
+
+  .category-pharmacy-btn-link {
+    width: 192px;
+  }
+
+  .category-yellow-btn-link {
+    width: 174px;
+  }
+
+  /* Category HERO Section Styles */
+
+  .category-hero {
+    padding-top: 63px;
+    padding-bottom: 48px;
+  }
+
+  .category-hero-background {
+    height: 416px;
+  }
+
+  .category-hero-woman-pic {
+    width: 374px;
+  }
+
+  .category-hero-bubble-small {
+    height: 43px;
+    width: 43px;
+    top: 10%;
+    right: 10%;
+  }
+
+  .category-hero-bubble-medium {
+    width: 84px;
+    height: 84px;
+    left: -2%;
+  }
+
+  .category-hero-bubble-large {
+    height: 144px;
+    width: 144px;
+    top: 47%;
+  }
+
+  .category-hero-woman-legkolaks-pic {
+    width: 310px;
+  }
+
+  /* Category ABOUT Section Styles */
+
+  .category-about-title {
+    margin-bottom: 26px;
+  }
+
+  .category-about-text {
+    margin-bottom: 24px;
+  }
+
+  .category-about-list {
+    margin-bottom: 32px;
+    gap: 20px;
+  }
+
+  .category-about-item-flex {
+    max-width: 510px;
+  }
+
+  .category-about-item {
+    gap: 20px;
+  }
+
+  .category-about-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .category-about-btn-flex {
+    gap: 60px;
+  }
+
+  .category-about-features {
+    background-image: url(../img/adults/svg/icon-thread-desk.svg);
+    padding-top: 96px;
+    padding-bottom: 96px;
+    background-position: top 30% left 67%;
+    background-size: 190% auto;
+  }
+
+  .category-about-features-list {
+    gap: 105px;
+  }
+
+  .category-about-features-item {
+    max-width: 191px;
+  }
+
+  .category-about-features-img {
+    width: 114px;
+    height: 114px;
+  }
+
+  .category-about-features-icon-girl {
+    width: 50px;
+  }
+
+  .category-about-features-icon-pregnant {
+    width: 42px;
+  }
+
+  .category-about-features-link {
+    width: 100%;
+  }
+
+  .category-about-features-content {
+    flex-direction: column;
+  }
+
+  .category-about-features-text-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .category-about-features-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+  }
+
+  .category-about-features-arrow {
+    width: 7px;
+  }
+
+  /* Category HOW TO USE Section Styles */
+
+  @media screen and (max-width: 1439px) {
+    .category-how-to-use-flex-item {
+      max-width: 470px;
+    }
+  }
+
+  .category-how-to-use-woman-pic {
+    max-width: 470px;
+  }
+
+  .category-how-to-use-title {
+    margin-bottom: 22px;
+    max-width: 350px;
+  }
+
+  .category-how-to-use-subtitle-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
+
+  .category-how-to-use-subtitle {
+    max-width: 162px;
+  }
+}
+
+/* ----------MEDIA 1330px Style---------- */
+
+@media screen and (min-width: 1330px) {
+  .category-about-features {
+    background-size: auto;
+  }
+}
+
+/* ----------MEDIA 1440px Style---------- */
+
+@media screen and (min-width: 1440px) {
+  /* BUTTONS Category Pages Styles */
+
+  .category-white-btn-link {
+    width: 216px;
+    height: 50px;
+    transition: transform var(--btn-tra);
+  }
+
+  .category-white-btn-link:is(:hover, :focus) {
+    color: #ffffff;
+    background-color: #40c4fe;
+    border: 1px solid #40c4fe;
+  }
+
+  .category-pharmacy-btn-link {
+    width: 241px;
+    height: 50px;
+    transition: transform var(--btn-tra);
+  }
+
+  .category-pharmacy-btn-link:is(:hover, :focus) {
+    color: #ffffff;
+    background-color: #40c4fe;
+    border: 2px solid #40c4fe;
+  }
+
+  .category-yellow-btn-link {
+    width: 217px;
+    height: 50px;
+    transition: transform var(--btn-tra);
+  }
+
+  .category-yellow-btn-link:is(:hover, :focus) {
+    color: #2468a6;
+    background-color: transparent;
+    border: 2px solid #40c4fe;
+  }
+
+  /* Category HERO Section Styles */
+
+  .category-hero {
+    padding-top: 79px;
+    padding-bottom: 60px;
+  }
+
+  .category-hero-background {
+    height: 520px;
+    border-radius: 40px;
+    border-top-right-radius: 160px;
+    border-bottom-left-radius: 160px;
+  }
+
+  .category-hero-title-wrap {
+    max-width: 390px;
+  }
+
+  .category-hero-woman-pic {
+    width: 466px;
+  }
+
+  .category-hero-bubble-small {
+    height: 52px;
+    width: 52px;
+    top: 10%;
+    right: 10%;
+  }
+
+  .category-hero-bubble-medium {
+    width: 104px;
+    height: 104px;
+    left: 0;
+  }
+
+  .category-hero-bubble-large {
+    height: 180px;
+    width: 180px;
+    top: 47%;
+  }
+
+  .category-hero-woman-legkolaks-pic {
+    width: 385px;
+  }
+
+  /* Category ABOUT Section Styles */
+
+  .category-about-title {
+    margin-bottom: 32px;
+  }
+
+  .category-about-list {
+    justify-content: space-between;
+  }
+
+  .category-about-features {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-position: top 38% left 77%;
+    position: relative;
+  }
+
+  .category-about-features-list {
+    gap: 107px;
+  }
+
+  .category-about-features-item {
+    width: 191px;
+  }
+
+  .category-about-features-img {
+    width: 142px;
+    height: 142px;
+  }
+
+  .category-about-features-icon-girl {
+    width: 63px;
+  }
+
+  .category-about-features-icon-pregnant {
+    width: 52px;
+  }
+
+  .category-about-features-link {
+    transition: transform var(--link-tra);
+  }
+
+  .category-about-features-link:is(:hover, :focus) {
+    color: #25bbfe;
+  }
+
+  .category-about-features-title {
+    font-size: 17px;
+    line-height: 1.41;
+  }
+
+  .category-about-features-bubble-small {
+    width: 54px;
+    height: 54px;
+    background-image: linear-gradient(244.57deg, #11e4fc 17.29%, #25bbfe 55.89%);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    transform: matrix(-0.07, -1, -1, 0.07, 0, 0);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 89%;
+  }
+
+  .category-about-features-bubble-medium {
+    width: 122px;
+    height: 122px;
+    background-image: linear-gradient(244.57deg, #11e4fc 17.29%, #25bbfe 55.89%);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    transform: rotate(-85.76deg);
+    border-radius: 50%;
+    position: absolute;
+    top: 55%;
+    right: 86%;
+  }
+
+  /* Category HOW TO USE Section Styles */
+
+  .category-how-to-use {
+    padding-bottom: 80px;
+  }
+
+  .category-how-to-use-flex {
+    gap: 80px;
+  }
+
+  .category-how-to-use-title {
+    margin-bottom: 28px;
+  }
+
+  .category-how-to-use-subtitle-wrap {
+    margin-bottom: 40px;
+  }
+
+  .category-how-to-use-subtitle {
+    max-width: 205px;
+  }
+
+  .category-how-to-use-item {
+    gap: 15px;
+  }
+
+  .category-how-to-use-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .category-how-to-use-item-text {
+    font-size: 17px;
+    line-height: 1.47;
+  }
+}

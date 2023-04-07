@@ -7,13 +7,6 @@
   margin: 0 auto;
 }
 
-.header-container {
-  min-width: 260px;
-  max-width: 1248px;
-  padding: 0px 12px;
-  margin: 0 auto;
-}
-
 .hero-container {
   min-width: 260px;
   max-width: 1248px;
@@ -31,36 +24,6 @@
   min-width: 252px;
   max-width: 1250px;
   padding: 0px 24px;
-  margin: 0 auto;
-}
-
-.footer-container {
-  max-width: 1440px;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-
-.contraindications-container {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-.no-scroll {
-  overflow: hidden;
-}
-
-.h2-title {
-  font-family: "Arimo", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.4;
-  color: var(--title-color);
-  text-transform: uppercase;
-}
-
-.img {
-  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -1606,15 +1569,8 @@
 
 @media screen and (min-width: 1440px) {
   /* IMG HOVER Style */
-
-  .img-hover,
   .img-about-girl-hover {
     transition: transform var(--img-tra);
-  }
-
-  .img-hover:hover,
-  .img-hover:focus {
-    transform: scale(1.2);
   }
 
   .img-about-girl-hover:hover,
