@@ -36,6 +36,10 @@
   --mob-background-image: 272px;
   --mob768-hero-background-wrap: 768px;
   --tab-hero-background-wrap: 1024px;
+
+  /* Blog Post Page common margin */
+  --blog-post-main-margin: 16px;
+  --blog-post-second-margin: 32px;
 }
 
 body {
@@ -61,6 +65,11 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
 }
 
 img {
